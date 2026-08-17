@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>শেয়ার পোর্টফোলিও ট্র্যাকার · Mushfiq's Tools</title>
+<style>
+  :root {
+    --bg: #0b0f1a;
+    --card: rgba(255,255,255,0.04);
+    --card-border: rgba(255,255,255,0.08);
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #22d3ee;
+    --green: #34d399;
+    --red: #f87171;
+    --amber: #fbbf24;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Bengali", sans-serif;
+    background:
+      radial-gradient(1000px 500px at 85% -10%, rgba(34,211,238,0.12), transparent 60%),
+      radial-gradient(800px 400px at 5% 0%, rgba(129,140,248,0.12), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+  header { margin-bottom: 32px; }
+  .top {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .top a {
+    color: var(--muted); text-decoration: none; font-size: 14px;
+    padding: 8px 14px; border: 1px solid var(--card-border);
+    border-radius: 99px; background: var(--card);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .top a:hover { color: var(--accent); border-color: rgba(34,211,238,0.5); }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+  .summary {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px; margin-bottom: 24px;
+  }
+  .stat {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 16px;
+  }
+  .stat .label { font-size: 12px; color: var(--muted); }
+  .stat .value { font-size: 22px; font-weight: 700; margin-top: 2px; }
+  .stat .value.up { color: var(--green); }
+  .stat .value.down { color: var(--red); }
+
+  .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--card-border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--card); }
+  th {
+    text-align: left; padding: 14px 16px; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--muted);
+    border-bottom: 1px solid var(--card-border); background: rgba(0,0,0,0.2);
+    white-space: nowrap;
+  }
+  td { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .num { font-variant-numeric: tabular-nums; text-align: right; }
+  .company { font-weight: 600; }
+  .ticker { color: var(--muted); font-size: 12px; font-weight: 400; }
+  .pill {
+    display: inline-block; font-size: 11px; padding: 2px 10px; border-radius: 99px; font-weight: 600;
+  }
+  .pill.pos { background: rgba(52,211,153,0.12); color: var(--green); border: 1px solid rgba(52,211,153,0.3); }
+  .pill.neg { background: rgba(248,113,113,0.12); color: var(--red); border: 1px solid rgba(248,113,113,0.3); }
+  .pill.flat { background: rgba(251,191,36,0.12); color: var(--amber); border: 1px solid rgba(251,191,36,0.3); }
+
+  .section-title { font-size: 15px; font-weight: 600; margin: 32px 0 12px; }
+  .note {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 16px 18px;
+    font-size: 13px; color: var(--muted); margin-top: 28px;
+  }
+  .note strong { color: var(--text); }
+  footer { text-align: center; margin-top: 40px; color: var(--muted); font-size: 12.5px; }
+
+  .edit-btn {
+    background: rgba(34,211,238,0.12); color: var(--accent);
+    border: 1px solid rgba(34,211,238,0.3); border-radius: 99px;
+    padding: 8px 16px; font-size: 13px; cursor: pointer; font-weight: 600;
+    transition: background 0.2s;
+  }
+  .edit-btn:hover { background: rgba(34,211,238,0.2); }
+  .hidden { display: none; }
+  .edit-panel {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 20px; margin-bottom: 24px;
+  }
+  .edit-row {
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 10px; margin-bottom: 10px;
+    align-items: center;
+  }
+  .edit-row input {
+    width: 100%; padding: 10px 12px; border-radius: 10px;
+    border: 1px solid var(--card-border); background: rgba(0,0,0,0.3);
+    color: var(--text); font-size: 14px;
+  }
+  .edit-row input:focus { outline: none; border-color: rgba(34,211,238,0.5); }
+  .edit-actions { display: flex; gap: 10px; margin-top: 14px; }
+  .btn {
+    padding: 10px 18px; border-radius: 10px; border: none; cursor: pointer;
+    font-size: 14px; font-weight: 600;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #081120; }
+  .btn-ghost { background: transparent; border: 1px solid var(--card-border); color: var(--muted); }
+  .btn-primary:hover { filter: brightness(1.1); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="top">
+      <div>
+        <h1>📈 শেয়ার পোর্টফোলিও ট্র্যাকার</h1>
+        <p class="sub">৫ কোম্পানির SIP প্ল্যান + দাম — নিজে হালনাগাদ করুন</p>
+      </div>
+      <a href="index.html">← ড্যাশবোর্ড</a>
+    </div>
+  </header>
+
+  <div class="summary" id="summary"></div>
+
+  <div class="hidden" id="editPanel">
+    <div class="edit-panel">
+      <div class="edit-row" style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:0.05em;">
+        <span>কোম্পানি</span><span>শেয়ার সংখ্যা</span><span>ক্রয় দাম (৳)</span><span>বাজার দাম (৳)</span>
+      </div>
+      <div id="editRows"></div>
+      <div class="edit-actions">
+        <button class="btn btn-primary" onclick="save()">সংরক্ষণ করুন</button>
+        <button class="btn btn-ghost" onclick="toggleEdit()">বাতিল</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">আমার পোর্টফোলিও</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>কোম্পানি</th>
+          <th class="num">শেয়ার</th>
+          <th class="num">ক্রয় দাম</th>
+          <th class="num">বাজার দাম</th>
+          <th class="num">বাজার মূল্য</th>
+          <th class="num">লাভ/ক্ষতি</th>
+          <th>পরিবর্তন</th>
+        </tr>
+      </thead>
+      <tbody id="portfolioBody"></tbody>
+    </table>
+  </div>
+
+  <div class="section-title">SIP প্ল্যান (২০,০০০ ৳/মাস)</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>কোম্পানি</th><th class="num">অংশ</th><th class="num">টাকা/মাস</th><th>ধরণ</th></tr>
+      </thead>
+      <tbody id="planBody"></tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <strong>নিয়ম মেনে চলুন:</strong> দাম কমলে বেশি কিনুন, বাড়লে কম। প্রতি ২-৩ মাসে EPS/ডিভিডেন্ড রিভিউ করুন।
+    ইমার্জেন্সি ফান্ড (৬ মাসের খরচ) আলাদা রাখুন। এটা শিক্ষামূলক, আর্থিক পরামর্শ নয়।
+  </div>
+
+  <footer>
+    <button class="edit-btn" onclick="toggleEdit()">✏️ দাম/শেয়ার হালনাগাদ করুন</button>
+  </footer>
+</div>
+
+<script>
+const STORAGE_KEY = 'mushfiq_share_tracker_v1';
+
+const PLAN = [
+  { ticker: 'SQURPHARMA', name: 'Square Pharma', pct: 30, taka: 6000, type: 'নোঙর — স্থির, কম্পাউন্ডিং' },
+  { ticker: 'BRACBANK', name: 'Brac Bank', pct: 20, taka: 4000, type: 'নোঙর — bKash, গভর্নেন্স' },
+  { ticker: 'GP', name: 'Grameenphone', pct: 20, taka: 4000, type: 'মাধ্যম — স্থিতিশীল, কম গ্রোথ' },
+  { ticker: 'EBL', name: 'EBL / City Bank', pct: 15, taka: 3000, type: 'মাধ্যম — ডিজিটাল ব্যাংকিং' },
+  { ticker: 'BSRMSTEEL', name: 'BSRM', pct: 15, taka: 3000, type: 'গ্রোথ — সেক্টর নেতা' }
+];
+
+const DEFAULTS = [
+  { shares: 0, cost: 220.00, price: 220.00 },
+  { shares: 0, cost: 64.00, price: 64.00 },
+  { shares: 0, cost: 260.00, price: 260.00 },
+  { shares: 0, cost: 27.50, price: 27.50 },
+  { shares: 0, cost: 96.00, price: 96.00 }
+];
+
+const fmt = (n, d = 2) => n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const bdt = (n) => '৳' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+
+function load() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return DEFAULTS.map(d => ({ ...d }));
+}
+
+function save() {
+  const data = [];
+  const inputs = document.querySelectorAll('#editRows .edit-row');
+  inputs.forEach((row) => {
+    const cells = row.querySelectorAll('input');
+    data.push({
+      shares: parseFloat(cells[0].value) || 0,
+      cost: parseFloat(cells[1].value) || 0,
+      price: parseFloat(cells[2].value) || 0
+    });
+  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  toggleEdit();
+  render();
+}
+
+function render() {
+  const data = load();
+  let totalValue = 0, totalCost = 0;
+
+  const body = document.getElementById('portfolioBody');
+  body.innerHTML = '';
+  PLAN.forEach((p, i) => {
+    const d = data[i] || { shares: 0, cost: 0, price: 0 };
+    const value = d.shares * d.price;
+    const invested = d.shares * d.cost;
+    const pnl = value - invested;
+    const pnlPct = invested > 0 ? (pnl / invested) * 100 : 0;
+    totalValue += value;
+    totalCost += invested;
+
+    const chg = d.price - d.cost;
+    const chgPct = d.cost > 0 ? (chg / d.cost) * 100 : 0;
+    const pillClass = chgPct > 0 ? 'pos' : chgPct < 0 ? 'neg' : 'flat';
+    const pillText = (chgPct > 0 ? '+' : '') + chgPct.toFixed(2) + '%';
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="company">${p.name} <span class="ticker">${p.ticker}</span></td>
+      <td class="num">${d.shares}</td>
+      <td class="num">${fmt(d.cost)}</td>
+      <td class="num">${fmt(d.price)}</td>
+      <td class="num">${bdt(value)}</td>
+      <td class="num ${pnl >= 0 ? 'value up' : 'value down'}">${pnl >= 0 ? '+' : ''}${bdt(pnl)}</td>
+      <td><span class="pill ${pillClass}">${pillText}</span></td>
+    `;
+    body.appendChild(tr);
+  });
+
+  const totalPnl = totalValue - totalCost;
+  const totalPct = totalCost > 0 ? (totalPnl / totalCost) * 100 : 0;
+  const summary = document.getElementById('summary');
+  summary.innerHTML = `
+    <div class="stat"><div class="label">মোট বিনিয়োগ</div><div class="value">${bdt(totalCost)}</div></div>
+    <div class="stat"><div class="label">মোট বাজার মূল্য</div><div class="value">${bdt(totalValue)}</div></div>
+    <div class="stat"><div class="label">মোট লাভ/ক্ষতি</div><div class="value ${totalPnl >= 0 ? 'up' : 'down'}">${totalPnl >= 0 ? '+' : ''}${bdt(totalPnl)} (${totalPct >= 0 ? '+' : ''}${totalPct.toFixed(2)}%)</div></div>
+  `;
+
+  const planBody = document.getElementById('planBody');
+  planBody.innerHTML = '';
+  PLAN.forEach(p => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="company">${p.name} <span class="ticker">${p.ticker}</span></td>
+      <td class="num">${p.pct}%</td>
+      <td class="num">${bdt(p.taka)}</td>
+      <td>${p.type}</td>
+    `;
+    planBody.appendChild(tr);
+  });
+}
+
+function toggleEdit() {
+  const panel = document.getElementById('editPanel');
+  if (panel.classList.contains('hidden')) {
+    const data = load();
+    const rows = document.getElementById('editRows');
+    rows.innerHTML = '';
+    PLAN.forEach((p, i) => {
+      const d = data[i] || { shares: 0, cost: 0, price: 0 };
+      const row = document.createElement('div');
+      row.className = 'edit-row';
+      row.innerHTML = `
+        <div style="font-weight:600">${p.name} <span style="color:var(--muted);font-weight:400">${p.ticker}</span></div>
+        <input type="number" step="1" value="${d.shares}" placeholder="শেয়ার">
+        <input type="number" step="0.01" value="${d.cost}" placeholder="ক্রয় দাম">
+        <input type="number" step="0.01" value="${d.price}" placeholder="বাজার দাম">
+      `;
+      rows.appendChild(row);
+    });
+    panel.classList.remove('hidden');
+  } else {
+    panel.classList.add('hidden');
+  }
+}
+
+render();
+</script>
+</body>
+</html>
