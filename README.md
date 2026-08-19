@@ -1,18 +1,25 @@
 # Mushfiq's Tools
 
-আমার ব্যক্তিগত টুল-ড্যাশবোর্ড — GitHub Pages-এ হোস্ট করা।
+My personal tools dashboard — hosted on GitHub Pages.
 
-## টুলসমূহ
+## Tools
 
-- **শেয়ার পোর্টফোলিও ট্র্যাকার** (`share-tracker.html`) — ৫ কোম্পানির SIP প্ল্যান + দাম ট্র্যাক
-- আরও টুল যোগ হবে...
+- **Share Portfolio Tracker** (`share-tracker.html`) — Monthly SIP buy guide with commission, allocation settings, and a performance dashboard. Prices are fetched automatically from DSE.
 
-## রান লোকালি
+## Auto price updates
+
+A GitHub Actions workflow (`.github/workflows/fetch-prices.yml`) runs **every hour, Sun–Thu** (Bangladesh time) and scrapes the latest DSE prices into `data/prices.json`. The tracker page reads this file on load.
+
+- Scraper: `scripts/fetch_prices.py`
+- Prices + history: `data/prices.json`
+- Trigger manually from Actions tab: **Fetch DSE Prices → Run workflow**
+
+## Run locally
 
 ```
 python3 -m http.server 8000
 ```
 
-তারপর খুলুন: http://localhost:8000
+Then open http://localhost:8000
 
-ডেটা ব্রাউজারের localStorage-এ সেভ হয়।
+User settings (companies, allocation %, monthly amount, commission) are saved in the browser's localStorage.

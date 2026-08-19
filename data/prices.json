@@ -1,0 +1,32 @@
+{
+  "lastUpdated": "2026-08-19T09:06:04+00:00",
+  "prices": {
+    "SQURPHARMA": 218.8,
+    "BRACBANK": 62.8,
+    "GP": 249.8,
+    "EBL": 23.9,
+    "BSRMSTEEL": 93.5
+  },
+  "history": [
+    {
+      "date": "2026-08-17",
+      "prices": {
+        "SQURPHARMA": 218.8,
+        "BRACBANK": 62.8,
+        "GP": 249.8,
+        "EBL": 23.9,
+        "BSRMSTEEL": 93.5
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "prices": {
+        "SQURPHARMA": 218.8,
+        "BRACBANK": 62.8,
+        "GP": 249.8,
+        "EBL": 23.9,
+        "BSRMSTEEL": 93.5
+      }
+    }
+  ]
+}

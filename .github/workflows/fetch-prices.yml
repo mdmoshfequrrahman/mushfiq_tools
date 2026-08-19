@@ -1,0 +1,40 @@
+name: Fetch DSE Prices
+
+on:
+  schedule:
+    # Every hour, Sun-Thu (0-4), 5:00 AM - 1:00 AM Bangladesh time (UTC+6)
+    # 5 AM BD = 23:00 UTC prev day, 1 AM BD = 19:00 UTC
+    - cron: "0 0-19,23 * * 0-4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch DSE prices
+        run: python scripts/fetch_prices.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "mushfiq_tools bot"
+          git config user.email "mushfiqpersonaldocs@gmail.com"
+          git add data/prices.json
+          if git diff --cached --quiet; then
+            echo "No price change, nothing to commit."
+          else
+            git commit -m "Update DSE prices ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+            git push origin main
+          fi
