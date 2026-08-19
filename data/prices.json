@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-19T16:08:55+00:00",
+  "lastUpdated": "2026-08-19T16:13:23+00:00",
   "prices": {
     "ACI": 196.1,
     "ACIFORMULA": 167.7,
@@ -13,8 +13,10 @@
     "CITYBANK": 31.1,
     "DBH": 44.1,
     "DELTALIFE": 77.4,
+    "DUTCHBANGL": 47.6,
     "EBL": 23.9,
     "FUWANGCER": 15.5,
+    "GP": 249.8,
     "HEIDELBCEM": 217.2,
     "IPDC": 34.5,
     "ISLAMIBANK": 28.4,
@@ -38,9 +40,7 @@
     "SQUARETEXT": 51.2,
     "SQURPHARMA": 218.8,
     "SUMITPOWER": 16.6,
-    "WALTONHIL": 388.0,
-    "DUTCHBANGL": 47.6,
-    "GP": 249.8
+    "WALTONHIL": 388.0
   },
   "history": [
     {
@@ -68,8 +68,10 @@
         "CITYBANK": 31.1,
         "DBH": 44.1,
         "DELTALIFE": 77.4,
+        "DUTCHBANGL": 47.6,
         "EBL": 23.9,
         "FUWANGCER": 15.5,
+        "GP": 249.8,
         "HEIDELBCEM": 217.2,
         "IPDC": 34.5,
         "ISLAMIBANK": 28.4,
@@ -93,9 +95,7 @@
         "SQUARETEXT": 51.2,
         "SQURPHARMA": 218.8,
         "SUMITPOWER": 16.6,
-        "WALTONHIL": 388.0,
-        "DUTCHBANGL": 47.6,
-        "GP": 249.8
+        "WALTONHIL": 388.0
       }
     }
   ],
@@ -274,8 +274,10 @@
     "CITYBANK": 31.1,
     "DBH": 44.4,
     "DELTALIFE": 76.9,
+    "DUTCHBANGL": 48.4,
     "EBL": 24.0,
     "FUWANGCER": 15.7,
+    "GP": 248.5,
     "HEIDELBCEM": 217.7,
     "IPDC": 34.1,
     "ISLAMIBANK": 28.4,
