@@ -20,6 +20,7 @@ except Exception:
     _SSL_CONTEXT = ssl.create_default_context()
 
 BASE_URL = "https://www.dse.com.bd/displayCompany.php?name={}"
+LISTING_URL = "https://www.dse.com.bd/company_listing.php"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
@@ -27,14 +28,14 @@ HEADERS = {
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 DATA_FILE = os.path.join(DATA_DIR, "prices.json")
+COMPANIES_FILE = os.path.join(DATA_DIR, "companies.json")
 
 # Default tickers. The frontend settings can define more, but this is the
 # baseline set the scraper keeps up to date.
 TICKERS = ["SQURPHARMA", "BRACBANK", "GP", "EBL", "BSRMSTEEL"]
 
 
-def fetch_html(ticker):
-    url = BASE_URL.format(ticker)
+def fetch_html(url):
     req = urllib.request.Request(url, headers=HEADERS)
     try:
         with urllib.request.urlopen(req, timeout=30, context=_SSL_CONTEXT) as resp:
@@ -47,6 +48,27 @@ def fetch_html(ticker):
         fallback.verify_mode = ssl.CERT_NONE
         with urllib.request.urlopen(req, timeout=30, context=fallback) as resp:
             return resp.read().decode("utf-8", errors="ignore")
+
+
+def fetch_company_list():
+    """Scrape the full DSE company listing into a list of {ticker, name}."""
+    html = fetch_html(LISTING_URL)
+    pairs = re.findall(
+        r"displayCompany\.php\?name=([A-Z0-9_]+)'\s+class='ab1[^']*'>"
+        r"[^<]*</a>\s*<span[^>]*>\(([^)]*)\)",
+        html,
+    )
+    seen = set()
+    out = []
+    for ticker, name in pairs:
+        ticker = ticker.strip()
+        name = name.strip()
+        if not ticker or ticker in seen:
+            continue
+        seen.add(ticker)
+        out.append({"ticker": ticker, "name": name})
+    out.sort(key=lambda c: c["ticker"])
+    return out
 
 
 def parse_price(html):
@@ -87,7 +109,7 @@ def main():
     prices = {}
     for ticker in TICKERS:
         try:
-            html = fetch_html(ticker)
+            html = fetch_html(BASE_URL.format(ticker))
             price = parse_price(html)
             if price is not None:
                 prices[ticker] = price
@@ -100,6 +122,16 @@ def main():
     if not prices:
         print("No prices fetched, aborting.", file=sys.stderr)
         sys.exit(1)
+
+    # refresh the full company list (ticker + name) for the searchable picker
+    try:
+        companies = fetch_company_list()
+        os.makedirs(DATA_DIR, exist_ok=True)
+        with open(COMPANIES_FILE, "w", encoding="utf-8") as f:
+            json.dump(companies, f, indent=1, ensure_ascii=False)
+        print(f"Wrote {len(companies)} companies to {COMPANIES_FILE}")
+    except Exception as exc:
+        print(f"company list: error {exc}", file=sys.stderr)
 
     data = load_existing()
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")

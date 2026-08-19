@@ -1,0 +1,2534 @@
+[
+ {
+  "ticker": "1JANATAMF",
+  "name": "First Janata Bank Mutual Fund"
+ },
+ {
+  "ticker": "1STPRIMFMF",
+  "name": "Prime Finance First Mutual Fund"
+ },
+ {
+  "ticker": "AAMRANET",
+  "name": "aamra networks limited"
+ },
+ {
+  "ticker": "AAMRATECH",
+  "name": "aamra technologies limited"
+ },
+ {
+  "ticker": "ABB1STMF",
+  "name": "AB Bank 1st Mutual fund"
+ },
+ {
+  "ticker": "ABBANK",
+  "name": "AB Bank PLC."
+ },
+ {
+  "ticker": "ABBLPBOND",
+  "name": "AB Bank Perpetual Bond"
+ },
+ {
+  "ticker": "ACFL",
+  "name": "Aman Cotton Fibrous PLC."
+ },
+ {
+  "ticker": "ACI",
+  "name": "Advanced Chemical Industries PLC"
+ },
+ {
+  "ticker": "ACIFORMULA",
+  "name": "ACI Formulations PLC"
+ },
+ {
+  "ticker": "ACMELAB",
+  "name": "The ACME Laboratories Limited"
+ },
+ {
+  "ticker": "ACMEPL",
+  "name": "ACME Pesticides Limited"
+ },
+ {
+  "ticker": "ACTIVEFINE",
+  "name": "Active Fine Chemicals Limited"
+ },
+ {
+  "ticker": "ADNTEL",
+  "name": "ADN Telecom Limited"
+ },
+ {
+  "ticker": "ADVENT",
+  "name": "Advent Pharma Limited"
+ },
+ {
+  "ticker": "AFCAGRO",
+  "name": "AFC Agro Biotech Ltd."
+ },
+ {
+  "ticker": "AFTABAUTO",
+  "name": "Aftab Automobiles Limited"
+ },
+ {
+  "ticker": "AGNISYSL",
+  "name": "Agni Systems PLC."
+ },
+ {
+  "ticker": "AGRANINS",
+  "name": "Agrani Insurance PLC."
+ },
+ {
+  "ticker": "AIBL1STIMF",
+  "name": "AIBL 1st Islamic Mutual Fund"
+ },
+ {
+  "ticker": "AIBLPBOND",
+  "name": "AIBL Mudaraba Perpetual Bond"
+ },
+ {
+  "ticker": "AIL",
+  "name": "Alif Industries Limited"
+ },
+ {
+  "ticker": "ALARABANK",
+  "name": "Al-Arafah Islami Bank PLC."
+ },
+ {
+  "ticker": "ALIF",
+  "name": "Alif Manufacturing Company Ltd."
+ },
+ {
+  "ticker": "ALLTEX",
+  "name": "Alltex Industries Ltd."
+ },
+ {
+  "ticker": "AMANFEED",
+  "name": "Aman Feed PLC."
+ },
+ {
+  "ticker": "AMBEEPHA",
+  "name": "Ambee Pharmaceuticals PLC"
+ },
+ {
+  "ticker": "ANLIMAYARN",
+  "name": "Anlimayarn Dyeing Ltd."
+ },
+ {
+  "ticker": "ANWARGALV",
+  "name": "Anwar Galvanizing Ltd."
+ },
+ {
+  "ticker": "AOL",
+  "name": "Associated Oxygen Limited"
+ },
+ {
+  "ticker": "APEXFOODS",
+  "name": "Apex Foods Limited"
+ },
+ {
+  "ticker": "APEXFOOT",
+  "name": "Apex Footwear Limited"
+ },
+ {
+  "ticker": "APEXSPINN",
+  "name": "Apex Spinning & Knitting Mills Limited"
+ },
+ {
+  "ticker": "APEXTANRY",
+  "name": "Apex Tannery Limited"
+ },
+ {
+  "ticker": "APOLOISPAT",
+  "name": "Appollo Ispat Complex Limited"
+ },
+ {
+  "ticker": "APSCLBOND",
+  "name": "APSCL Non-Convertible and Fully Redeemable Coupon Bearing Bond"
+ },
+ {
+  "ticker": "ARAMIT",
+  "name": "Aramit Limited"
+ },
+ {
+  "ticker": "ARAMITCEM",
+  "name": "Aramit Cement Limited"
+ },
+ {
+  "ticker": "ARGONDENIM",
+  "name": "Argon Denims Limited"
+ },
+ {
+  "ticker": "ASIAINS",
+  "name": "Asia Insurance PLC."
+ },
+ {
+  "ticker": "ASIAPACINS",
+  "name": "Asia Pacific General Insurance PLC"
+ },
+ {
+  "ticker": "ASIATICLAB",
+  "name": "Asiatic Laboratories Limited"
+ },
+ {
+  "ticker": "ATLASBANG",
+  "name": "Atlas Bangladesh Ltd."
+ },
+ {
+  "ticker": "AZIZPIPES",
+  "name": "Aziz Pipes Ltd."
+ },
+ {
+  "ticker": "BANGAS",
+  "name": "Bangas Ltd."
+ },
+ {
+  "ticker": "BANKASI1PB",
+  "name": "Bank Asia 1st Perpetual Bond"
+ },
+ {
+  "ticker": "BANKASIA",
+  "name": "Bank Asia PLC."
+ },
+ {
+  "ticker": "BARKAPOWER",
+  "name": "Baraka Power Limited"
+ },
+ {
+  "ticker": "BATASHOE",
+  "name": "Bata Shoe Company (Bangladesh"
+ },
+ {
+  "ticker": "BATBC",
+  "name": "British American Tobacco Bangladesh Company Limited"
+ },
+ {
+  "ticker": "BAYLEASING",
+  "name": "Bay Leasing & Investment Limited"
+ },
+ {
+  "ticker": "BBS",
+  "name": "Bangladesh Building Systems PLC."
+ },
+ {
+  "ticker": "BBSCABLES",
+  "name": "BBS Cables PLC."
+ },
+ {
+  "ticker": "BDAUTOCA",
+  "name": "Bangladesh Autocars Ltd."
+ },
+ {
+  "ticker": "BDCOM",
+  "name": "BDCOM Online Ltd."
+ },
+ {
+  "ticker": "BDFINANCE",
+  "name": "Bangladesh Finance PLC."
+ },
+ {
+  "ticker": "BDLAMPS",
+  "name": "Bangladesh Lamps PLC"
+ },
+ {
+  "ticker": "BDSERVICE",
+  "name": "Bangladesh Services Ltd."
+ },
+ {
+  "ticker": "BDTHAI",
+  "name": "Bd.Thai Aluminium Ltd."
+ },
+ {
+  "ticker": "BDTHAIFOOD",
+  "name": "BD Thai Food & Beverage Limited"
+ },
+ {
+  "ticker": "BDWELDING",
+  "name": "Bangladesh Welding Electrodes Ltd."
+ },
+ {
+  "ticker": "BEACHHATCH",
+  "name": "Beach Hatchery Ltd."
+ },
+ {
+  "ticker": "BEACONPHAR",
+  "name": "Beacon Pharmaceuticals PLC"
+ },
+ {
+  "ticker": "BENGALWTL",
+  "name": "Bengal Windsor Thermoplastics PLC."
+ },
+ {
+  "ticker": "BERGERPBL",
+  "name": "Berger Paints Bangladesh Ltd."
+ },
+ {
+  "ticker": "BESTHLDNG",
+  "name": "Best Holdings PLC."
+ },
+ {
+  "ticker": "BEXGSUKUK",
+  "name": "Beximco Green Sukuk Al Istisna'a"
+ },
+ {
+  "ticker": "BEXIMCO",
+  "name": "Bangladesh Export Import Company Ltd."
+ },
+ {
+  "ticker": "BGIC",
+  "name": "Bangladesh General Insurance Company PLC."
+ },
+ {
+  "ticker": "BIFC",
+  "name": "Bangladesh Industrial Fin. Co. Ltd."
+ },
+ {
+  "ticker": "BNICL",
+  "name": "Bangladesh National Insurance Company Limited"
+ },
+ {
+  "ticker": "BPML",
+  "name": "Bashundhara Paper Mills Limited"
+ },
+ {
+  "ticker": "BPPL",
+  "name": "Baraka Patenga Power Limited"
+ },
+ {
+  "ticker": "BRACBANK",
+  "name": "BRAC Bank PLC."
+ },
+ {
+  "ticker": "BSC",
+  "name": "Bangladesh Shipping Corporation"
+ },
+ {
+  "ticker": "BSCPLC",
+  "name": "Bangladesh Submarine Cables PLC"
+ },
+ {
+  "ticker": "BSRMLTD",
+  "name": "Bangladesh Steel Re-Rolling Mills Limited"
+ },
+ {
+  "ticker": "BSRMSTEEL",
+  "name": "BSRM Steels Limited"
+ },
+ {
+  "ticker": "BXPHARMA",
+  "name": "Beximco Pharmaceuticals PLC."
+ },
+ {
+  "ticker": "CAPITECGBF",
+  "name": "Capitec Grameen Bank Growth Fund"
+ },
+ {
+  "ticker": "CAPMBDBLMF",
+  "name": "CAPM BDBL Mutual Fund 01"
+ },
+ {
+  "ticker": "CAPMIBBLMF",
+  "name": "CAPM IBBL Islamic Mutual Fund"
+ },
+ {
+  "ticker": "CBLPBOND",
+  "name": "City Bank Perpetual Bond"
+ },
+ {
+  "ticker": "CENTRALINS",
+  "name": "Central Insurance PLC."
+ },
+ {
+  "ticker": "CENTRALPHL",
+  "name": "Central Pharmaceuticals Limited"
+ },
+ {
+  "ticker": "CITYBANK",
+  "name": "City Bank PLC."
+ },
+ {
+  "ticker": "CITYGENINS",
+  "name": "City Insurance PLC."
+ },
+ {
+  "ticker": "CLICL",
+  "name": "Chartered Life Insurance PLC."
+ },
+ {
+  "ticker": "CNATEX",
+  "name": "C & A Textiles Limited"
+ },
+ {
+  "ticker": "CONFIDCEM",
+  "name": "Confidence Cement PLC."
+ },
+ {
+  "ticker": "CONTININS",
+  "name": "Continental Insurance PLC."
+ },
+ {
+  "ticker": "COPPERTECH",
+  "name": "Coppertech Industries Limited"
+ },
+ {
+  "ticker": "CROWNCEMNT",
+  "name": "Crown Cement PLC."
+ },
+ {
+  "ticker": "CRYSTALINS",
+  "name": "Crystal Insurance Company Limited"
+ },
+ {
+  "ticker": "CVOPRL",
+  "name": "CVO Petrochemical Refinery PLC."
+ },
+ {
+  "ticker": "DACCADYE",
+  "name": "The Dacca Dyeing & Manufacturing Co.Ltd."
+ },
+ {
+  "ticker": "DAFODILCOM",
+  "name": "Daffodil Computers PLC."
+ },
+ {
+  "ticker": "DBH",
+  "name": "DBH Finance PLC."
+ },
+ {
+  "ticker": "DBH1STMF",
+  "name": "DBH First Mutual Fund"
+ },
+ {
+  "ticker": "DBLPBOND",
+  "name": "Dhaka Bank Perpetual Bond"
+ },
+ {
+  "ticker": "DEBARACEM",
+  "name": "Aramit Cement Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DEBBDLUGG",
+  "name": "Bangladesh Luggage Ind. Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DEBBDWELD",
+  "name": "BD Welding Electrodes Ltd.(Deb-15%"
+ },
+ {
+  "ticker": "DEBBDZIPP",
+  "name": "Bangladesh Zipper Ind. Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DEBBXDENIM",
+  "name": "Beximco Denims Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DEBBXFISH",
+  "name": "Beximco Fisheries Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DEBBXKNI",
+  "name": "Beximco Knitting Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DEBBXTEX",
+  "name": "Beximco Textiles Ltd.(Deb-14%"
+ },
+ {
+  "ticker": "DELTALIFE",
+  "name": "Delta Life Insurance Company Ltd."
+ },
+ {
+  "ticker": "DELTASPINN",
+  "name": "Delta Spinners Ltd."
+ },
+ {
+  "ticker": "DESCO",
+  "name": "Dhaka Electric Supply Company Ltd."
+ },
+ {
+  "ticker": "DESHBANDHU",
+  "name": "Deshbandhu Polymer Limited"
+ },
+ {
+  "ticker": "DGIC",
+  "name": "Desh General Insurance Company Limited"
+ },
+ {
+  "ticker": "DHAKABANK",
+  "name": "Dhaka Bank PLC."
+ },
+ {
+  "ticker": "DHAKAINS",
+  "name": "Dhaka Insurance Limited"
+ },
+ {
+  "ticker": "DOMINAGE",
+  "name": "Dominage Steel Building Systems Limited"
+ },
+ {
+  "ticker": "DOREENPWR",
+  "name": "Doreen Power Generations and Systems Limited"
+ },
+ {
+  "ticker": "DSHGARME",
+  "name": "Desh Garments Ltd."
+ },
+ {
+  "ticker": "DSSL",
+  "name": "Dragon Sweater and Spinning Limited"
+ },
+ {
+  "ticker": "DULAMIACOT",
+  "name": "Dulamia Cotton Spinning Mills Ltd."
+ },
+ {
+  "ticker": "DUTCHBANGL",
+  "name": "Dutch-Bangla Bank PLC."
+ },
+ {
+  "ticker": "EASTERNINS",
+  "name": "Eastern Insurance PLC."
+ },
+ {
+  "ticker": "EASTLAND",
+  "name": "Eastland Insurance PLC."
+ },
+ {
+  "ticker": "EASTRNLUB",
+  "name": "Eastern Lubricants Blenders PLC."
+ },
+ {
+  "ticker": "EBL",
+  "name": "Eastern Bank PLC."
+ },
+ {
+  "ticker": "EBL1STMF",
+  "name": "EBL First Mutual Fund"
+ },
+ {
+  "ticker": "EBLNRBMF",
+  "name": "EBL NRB Mutual Fund"
+ },
+ {
+  "ticker": "ECABLES",
+  "name": "Eastern Cables Ltd."
+ },
+ {
+  "ticker": "EGEN",
+  "name": "eGeneration PLC."
+ },
+ {
+  "ticker": "EHL",
+  "name": "Eastern Housing Limited"
+ },
+ {
+  "ticker": "EIL",
+  "name": "Express Insurance Limited"
+ },
+ {
+  "ticker": "EMERALDOIL",
+  "name": "Emerald Oil Industries Ltd."
+ },
+ {
+  "ticker": "ENVOYTEX",
+  "name": "Envoy Textiles Limited"
+ },
+ {
+  "ticker": "EPGL",
+  "name": "Energypac Power Generation PLC."
+ },
+ {
+  "ticker": "ESQUIRENIT",
+  "name": "Esquire Knit Composite PLC"
+ },
+ {
+  "ticker": "ETL",
+  "name": "Evince Textiles Limited"
+ },
+ {
+  "ticker": "EXIM1STMF",
+  "name": "EXIM Bank 1st Mutual Fund"
+ },
+ {
+  "ticker": "EXIMBANK",
+  "name": "Export Import (Exim"
+ },
+ {
+  "ticker": "FAMILYTEX",
+  "name": "Familytex (BD"
+ },
+ {
+  "ticker": "FARCHEM",
+  "name": "Far Chemical Industries Limited"
+ },
+ {
+  "ticker": "FAREASTFIN",
+  "name": "Fareast Finance & Investment Limited"
+ },
+ {
+  "ticker": "FAREASTLIF",
+  "name": "Fareast Islami Life Insurance Co. Ltd."
+ },
+ {
+  "ticker": "FASFIN",
+  "name": "FAS Finance & Investment Limited"
+ },
+ {
+  "ticker": "FBFIF",
+  "name": "First Bangladesh Fixed Income Fund"
+ },
+ {
+  "ticker": "FEDERALINS",
+  "name": "Federal Insurance PLC"
+ },
+ {
+  "ticker": "FEKDIL",
+  "name": "Far East Knitting & Dyeing Industries PLC."
+ },
+ {
+  "ticker": "FINEFOODS",
+  "name": "Fine Foods Limited"
+ },
+ {
+  "ticker": "FIRSTFIN",
+  "name": "First Finance Limited"
+ },
+ {
+  "ticker": "FIRSTSBANK",
+  "name": "First Security Islami Bank PLC."
+ },
+ {
+  "ticker": "FORTUNE",
+  "name": "Fortune Shoes Limited"
+ },
+ {
+  "ticker": "FUWANGCER",
+  "name": "Fu-Wang Ceramic Industries Ltd."
+ },
+ {
+  "ticker": "FUWANGFOOD",
+  "name": "Fu Wang Food Ltd."
+ },
+ {
+  "ticker": "GBBPOWER",
+  "name": "GBB Power Ltd."
+ },
+ {
+  "ticker": "GEMINISEA",
+  "name": "Gemini Sea Food PLC"
+ },
+ {
+  "ticker": "GENEXIL",
+  "name": "Genex Infosys PLC"
+ },
+ {
+  "ticker": "GENNEXT",
+  "name": "Generation Next Fashions Limited"
+ },
+ {
+  "ticker": "GHAIL",
+  "name": "Golden Harvest Agro Industries Ltd."
+ },
+ {
+  "ticker": "GHCL",
+  "name": "Global Heavy Chemicals Limited"
+ },
+ {
+  "ticker": "GIB",
+  "name": "Global Islami Bank PLC"
+ },
+ {
+  "ticker": "GLDNJMF",
+  "name": "ICB AMCL CMSF Golden Jubilee Mutual Fund"
+ },
+ {
+  "ticker": "GLOBALINS",
+  "name": "Global Insurance PLC"
+ },
+ {
+  "ticker": "GOLDENSON",
+  "name": "Golden Son Ltd."
+ },
+ {
+  "ticker": "GP",
+  "name": "Grameenphone Ltd."
+ },
+ {
+  "ticker": "GPHISPAT",
+  "name": "GPH Ispat Ltd."
+ },
+ {
+  "ticker": "GQBALLPEN",
+  "name": "GQ Ball Pen Industries Ltd."
+ },
+ {
+  "ticker": "GRAMEENS2",
+  "name": "Grameen One : Scheme Two"
+ },
+ {
+  "ticker": "GREENDELMF",
+  "name": "Green Delta Mutual Fund"
+ },
+ {
+  "ticker": "GREENDELT",
+  "name": "Green Delta Insurance PLC."
+ },
+ {
+  "ticker": "GSPFINANCE",
+  "name": "GSP Finance Company (Bangladesh"
+ },
+ {
+  "ticker": "HAKKANIPUL",
+  "name": "Hakkani Pulp & Paper Mills PLC."
+ },
+ {
+  "ticker": "HAMI",
+  "name": "Hami Industries PLC"
+ },
+ {
+  "ticker": "HEIDELBCEM",
+  "name": "Heidelberg Materials Bangladesh PLC."
+ },
+ {
+  "ticker": "HFL",
+  "name": "Hamid Fabrics PLC"
+ },
+ {
+  "ticker": "HRTEX",
+  "name": "H.R.Textile Ltd."
+ },
+ {
+  "ticker": "HWAWELLTEX",
+  "name": "Hwa Well Textiles (BD"
+ },
+ {
+  "ticker": "IBBL2PBOND",
+  "name": "IBBL 2nd Perpetual Mudaraba Bond"
+ },
+ {
+  "ticker": "IBBLPBOND",
+  "name": "IBBL Mudaraba Perpetual Bond"
+ },
+ {
+  "ticker": "IBNSINA",
+  "name": "The IBN SINA  Pharmaceutical Industry PLC"
+ },
+ {
+  "ticker": "IBP",
+  "name": "Indo-Bangla Pharmaceuticals Limited"
+ },
+ {
+  "ticker": "ICB",
+  "name": "Investment Corporation Of Bangladesh"
+ },
+ {
+  "ticker": "ICB3RDNRB",
+  "name": "ICB AMCL Third NRB Mutual Fund"
+ },
+ {
+  "ticker": "ICBAGRANI1",
+  "name": "ICB AMCL First Agrani Bank Mutual Fund"
+ },
+ {
+  "ticker": "ICBAMCL2ND",
+  "name": "ICB AMCL Second Mutual Fund"
+ },
+ {
+  "ticker": "ICBEPMF1S1",
+  "name": "ICB Employees Provident MF 1: Scheme 1"
+ },
+ {
+  "ticker": "ICBIBANK",
+  "name": "ICB Islamic Bank Limited"
+ },
+ {
+  "ticker": "ICBSONALI1",
+  "name": "ICB AMCL Sonali Bank Limited 1st Mutual Fund"
+ },
+ {
+  "ticker": "ICICL",
+  "name": "Islami Commercial Insurance PLC."
+ },
+ {
+  "ticker": "IDLC",
+  "name": "IDLC Finance PLC."
+ },
+ {
+  "ticker": "IFADAUTOS",
+  "name": "IFAD Autos PLC."
+ },
+ {
+  "ticker": "IFIC",
+  "name": "IFIC Bank PLC"
+ },
+ {
+  "ticker": "IFIC1STMF",
+  "name": "IFIC Bank 1st Mutual Fund"
+ },
+ {
+  "ticker": "IFILISLMF1",
+  "name": "IFIL Islamic Mutual Fund-1"
+ },
+ {
+  "ticker": "ILFSL",
+  "name": "International Leasing & Financial Services Limited"
+ },
+ {
+  "ticker": "INDEXAGRO",
+  "name": "Index Agro Industries Limited"
+ },
+ {
+  "ticker": "INTECH",
+  "name": "Intech Limited"
+ },
+ {
+  "ticker": "INTRACO",
+  "name": "Intraco Refueling Station PLC"
+ },
+ {
+  "ticker": "IPDC",
+  "name": "IPDC Finance PLC."
+ },
+ {
+  "ticker": "ISLAMIBANK",
+  "name": "Islami Bank Bangladesh PLC."
+ },
+ {
+  "ticker": "ISLAMICFIN",
+  "name": "Islamic Finance & Investment PLC."
+ },
+ {
+  "ticker": "ISLAMIINS",
+  "name": "Islami Insurance Bangladesh Limited"
+ },
+ {
+  "ticker": "ISNLTD",
+  "name": "Information Services Network Ltd."
+ },
+ {
+  "ticker": "ITC",
+  "name": "IT Consultants PLC."
+ },
+ {
+  "ticker": "JAMUNABANK",
+  "name": "Jamuna Bank PLC."
+ },
+ {
+  "ticker": "JAMUNAOIL",
+  "name": "Jamuna Oil PLC."
+ },
+ {
+  "ticker": "JANATAINS",
+  "name": "Janata Insurance PLC"
+ },
+ {
+  "ticker": "JHRML",
+  "name": "JMI Hospital Requisite Manufacturing Limited"
+ },
+ {
+  "ticker": "JMISMDL",
+  "name": "JMI Syringes & Medical Devices Ltd."
+ },
+ {
+  "ticker": "JUTESPINN",
+  "name": "Jute Spinners Ltd."
+ },
+ {
+  "ticker": "KARNAPHULI",
+  "name": "Karnaphuli Insurance PLC"
+ },
+ {
+  "ticker": "KBPPWBIL",
+  "name": "Khan Brothers PP Woven Bag Industries Limited"
+ },
+ {
+  "ticker": "KDSALTD",
+  "name": "KDS Accessories Limited"
+ },
+ {
+  "ticker": "KEYACOSMET",
+  "name": "Keya Cosmetics Ltd."
+ },
+ {
+  "ticker": "KOHINOOR",
+  "name": "Kohinoor Chemical Company (Bangladesh"
+ },
+ {
+  "ticker": "KPCL",
+  "name": "Khulna Power Company Limited"
+ },
+ {
+  "ticker": "KPPL",
+  "name": "Khulna Printing & Packaging Limited"
+ },
+ {
+  "ticker": "KTL",
+  "name": "Kattali Textile Limited"
+ },
+ {
+  "ticker": "LANKABAFIN",
+  "name": "LankaBangla Finance PLC."
+ },
+ {
+  "ticker": "LEGACYFOOT",
+  "name": "Legacy Footwear Ltd."
+ },
+ {
+  "ticker": "LHB",
+  "name": "LafargeHolcim Bangladesh PLC."
+ },
+ {
+  "ticker": "LIBRAINFU",
+  "name": "Libra Infusions Limited"
+ },
+ {
+  "ticker": "LINDEBD",
+  "name": "Linde Bangladesh Limited"
+ },
+ {
+  "ticker": "LOVELLO",
+  "name": "Taufika Foods and Lovello Ice-cream PLC"
+ },
+ {
+  "ticker": "LRBDL",
+  "name": "Lub-rref (Bangladesh"
+ },
+ {
+  "ticker": "LRGLOBMF1",
+  "name": "LR Global Bangladesh Mutual Fund One"
+ },
+ {
+  "ticker": "MAGURAPLEX",
+  "name": "Magura Multiplex PLC."
+ },
+ {
+  "ticker": "MAKSONSPIN",
+  "name": "Maksons Spinning Mills PLC."
+ },
+ {
+  "ticker": "MALEKSPIN",
+  "name": "Malek Spinning Mills PLC."
+ },
+ {
+  "ticker": "MARICO",
+  "name": "Marico Bangladesh Limited"
+ },
+ {
+  "ticker": "MATINSPINN",
+  "name": "Matin Spinning Mills PLC"
+ },
+ {
+  "ticker": "MBL1STMF",
+  "name": "MBL 1st Mutual Fund"
+ },
+ {
+  "ticker": "MBPLCPBOND",
+  "name": "Mercantile Bank Perpetual Bond"
+ },
+ {
+  "ticker": "MEGCONMILK",
+  "name": "Meghna Condensed Milk Industries Ltd."
+ },
+ {
+  "ticker": "MEGHNACEM",
+  "name": "Meghna Cement Mills PLC."
+ },
+ {
+  "ticker": "MEGHNAINS",
+  "name": "Meghna Insurance PLC."
+ },
+ {
+  "ticker": "MEGHNALIFE",
+  "name": "Meghna Life Insurance PLC"
+ },
+ {
+  "ticker": "MEGHNAPET",
+  "name": "Meghna Pet Industries Ltd."
+ },
+ {
+  "ticker": "MERCANBANK",
+  "name": "Mercantile Bank PLC."
+ },
+ {
+  "ticker": "MERCINS",
+  "name": "Mercantile Islami Insurance PLC"
+ },
+ {
+  "ticker": "METROSPIN",
+  "name": "Metro Spinning Ltd."
+ },
+ {
+  "ticker": "MHSML",
+  "name": "Mozaffar Hossain Spinning Mills Ltd."
+ },
+ {
+  "ticker": "MIDASFIN",
+  "name": "MIDAS Financing PLC."
+ },
+ {
+  "ticker": "MIDLANDBNK",
+  "name": "Midland Bank PLC."
+ },
+ {
+  "ticker": "MIRACLEIND",
+  "name": "Miracle Industries Ltd."
+ },
+ {
+  "ticker": "MIRAKHTER",
+  "name": "Mir Akhter Hossain Limited"
+ },
+ {
+  "ticker": "MITHUNKNIT",
+  "name": "Mithun Knitting and Dyeing Ltd."
+ },
+ {
+  "ticker": "MJLBD",
+  "name": "MJL Bangladesh PLC."
+ },
+ {
+  "ticker": "MLDYEING",
+  "name": "M.L. Dyeing Limited"
+ },
+ {
+  "ticker": "MONNOAGML",
+  "name": "Monno Agro & General Machinery Limited"
+ },
+ {
+  "ticker": "MONNOCERA",
+  "name": "Monno Ceramic Industries Ltd."
+ },
+ {
+  "ticker": "MONNOFABR",
+  "name": "Monno Fabrics Limited"
+ },
+ {
+  "ticker": "MONOSPOOL",
+  "name": "Monospool Bangladesh PLC"
+ },
+ {
+  "ticker": "MPETROLEUM",
+  "name": "Meghna Petroleum PLC."
+ },
+ {
+  "ticker": "MTB",
+  "name": "Mutual Trust Bank PLC"
+ },
+ {
+  "ticker": "MTBPBOND",
+  "name": "Mutual Trust Bank Perpetual Bond"
+ },
+ {
+  "ticker": "NAHEEACP",
+  "name": "Nahee Aluminum Composite Panel PLC."
+ },
+ {
+  "ticker": "NATLIFEINS",
+  "name": "National Life Insurance PLC"
+ },
+ {
+  "ticker": "NAVANACNG",
+  "name": "Navana CNG Limited"
+ },
+ {
+  "ticker": "NAVANAPHAR",
+  "name": "Navana Pharmaceuticals PLC"
+ },
+ {
+  "ticker": "NBL",
+  "name": "National Bank PLC."
+ },
+ {
+  "ticker": "NCCBANK",
+  "name": "National Credit and Commerce Bank PLC."
+ },
+ {
+  "ticker": "NCCBLMF1",
+  "name": "NCCBL Mutual Fund-1"
+ },
+ {
+  "ticker": "NEWLINE",
+  "name": "New Line Clothings Limited"
+ },
+ {
+  "ticker": "NFML",
+  "name": "National Feed Mill Limited"
+ },
+ {
+  "ticker": "NHFIL",
+  "name": "National Housing Finance PLC"
+ },
+ {
+  "ticker": "NITOLINS",
+  "name": "Nitol Insurance PLC."
+ },
+ {
+  "ticker": "NORTHERN",
+  "name": "Northern Jute Manufacturing Co. Ltd."
+ },
+ {
+  "ticker": "NORTHRNINS",
+  "name": "Northern Islami Insurance PLC."
+ },
+ {
+  "ticker": "NPOLYMER",
+  "name": "National Polymer Industries PLC."
+ },
+ {
+  "ticker": "NRBBANK",
+  "name": "NRB Bank PLC."
+ },
+ {
+  "ticker": "NRBCBANK",
+  "name": "NRBC Bank PLC."
+ },
+ {
+  "ticker": "NTC",
+  "name": "National Tea Company Ltd."
+ },
+ {
+  "ticker": "NTLTUBES",
+  "name": "National Tubes Limited"
+ },
+ {
+  "ticker": "NURANI",
+  "name": "Nurani Dyeing & Sweater Limited"
+ },
+ {
+  "ticker": "OAL",
+  "name": "Olympic Accessories Limited"
+ },
+ {
+  "ticker": "OIMEX",
+  "name": "Oimex Electrode Limited"
+ },
+ {
+  "ticker": "OLYMPIC",
+  "name": "Olympic Industries PLC."
+ },
+ {
+  "ticker": "ONEBANKPLC",
+  "name": "One Bank PLC"
+ },
+ {
+  "ticker": "ORIONINFU",
+  "name": "Orion Infusion Ltd."
+ },
+ {
+  "ticker": "ORIONPHARM",
+  "name": "Orion Pharma Ltd."
+ },
+ {
+  "ticker": "PADMALIFE",
+  "name": "Padma Islami Life Insurance Limited"
+ },
+ {
+  "ticker": "PADMAOIL",
+  "name": "Padma Oil PLC."
+ },
+ {
+  "ticker": "PARAMOUNT",
+  "name": "Paramount Insurance PLC."
+ },
+ {
+  "ticker": "PBLPBOND",
+  "name": "Pubali Bank Perpetual Bond"
+ },
+ {
+  "ticker": "PDL",
+  "name": "Pacific Denims Limited"
+ },
+ {
+  "ticker": "PENINSULA",
+  "name": "The Peninsula Chittagong PLC"
+ },
+ {
+  "ticker": "PEOPLESINS",
+  "name": "Peoples Insurance PLC."
+ },
+ {
+  "ticker": "PF1STMF",
+  "name": "Phoenix Finance 1st Mutual Fund"
+ },
+ {
+  "ticker": "PHARMAID",
+  "name": "Pharma Aids Limited"
+ },
+ {
+  "ticker": "PHENIXINS",
+  "name": "Phoenix Insurance PLC."
+ },
+ {
+  "ticker": "PHOENIXFIN",
+  "name": "Phoenix Finance and Investments Ltd."
+ },
+ {
+  "ticker": "PHPMF1",
+  "name": "PHP First Mutual Fund"
+ },
+ {
+  "ticker": "PIONEERINS",
+  "name": "Pioneer Insurance PLC"
+ },
+ {
+  "ticker": "PLFSL",
+  "name": "Peoples Leasing and Fin. Services Ltd."
+ },
+ {
+  "ticker": "POPULAR1MF",
+  "name": "Popular Life First Mutual Fund"
+ },
+ {
+  "ticker": "POPULARLIF",
+  "name": "Popular Life Insurance Co. Ltd."
+ },
+ {
+  "ticker": "POWERGRID",
+  "name": "Power Grid Company of Bangladesh Ltd."
+ },
+ {
+  "ticker": "PRAGATIINS",
+  "name": "Pragati Insurance PLC."
+ },
+ {
+  "ticker": "PRAGATILIF",
+  "name": "Pragati Life Insurance PLC."
+ },
+ {
+  "ticker": "PREBPBOND",
+  "name": "Premier Bank Perpetual Bond"
+ },
+ {
+  "ticker": "PREMIERBAN",
+  "name": "The Premier Bank PLC."
+ },
+ {
+  "ticker": "PREMIERCEM",
+  "name": "Premier Cement Mills PLC"
+ },
+ {
+  "ticker": "PREMIERLEA",
+  "name": "Premier Leasing & Finance Limited"
+ },
+ {
+  "ticker": "PRIME1ICBA",
+  "name": "Prime Bank 1st ICB AMCL Mutual Fund"
+ },
+ {
+  "ticker": "PRIMEBANK",
+  "name": "Prime Bank PLC."
+ },
+ {
+  "ticker": "PRIMEFIN",
+  "name": "Prime Finance & Investment Ltd."
+ },
+ {
+  "ticker": "PRIMEINSUR",
+  "name": "Prime Islami Insurance PLC"
+ },
+ {
+  "ticker": "PRIMELIFE",
+  "name": "Prime Islami Life Insurance Ltd."
+ },
+ {
+  "ticker": "PRIMETEX",
+  "name": "Prime Textile Spinning Mills Limited"
+ },
+ {
+  "ticker": "PROGRESLIF",
+  "name": "Progressive Life Insurance Co. Ltd."
+ },
+ {
+  "ticker": "PROVATIINS",
+  "name": "Provati Insurance PLC."
+ },
+ {
+  "ticker": "PTL",
+  "name": "Paramount Textile PLC."
+ },
+ {
+  "ticker": "PUBALIBANK",
+  "name": "Pubali Bank PLC."
+ },
+ {
+  "ticker": "PURABIGEN",
+  "name": "Purabi Gen. Insurance Company Ltd."
+ },
+ {
+  "ticker": "QUASEMIND",
+  "name": "Quasem Industries Ltd."
+ },
+ {
+  "ticker": "QUEENSOUTH",
+  "name": "Queen South Textile Mills Limited"
+ },
+ {
+  "ticker": "RAHIMAFOOD",
+  "name": "Rahima Food Corporation Limited"
+ },
+ {
+  "ticker": "RAHIMTEXT",
+  "name": "Rahim Textile Mills PLC."
+ },
+ {
+  "ticker": "RAKCERAMIC",
+  "name": "RAK Ceramics (Bangladesh"
+ },
+ {
+  "ticker": "RANFOUNDRY",
+  "name": "Rangpur Foundry Ltd."
+ },
+ {
+  "ticker": "RDFOOD",
+  "name": "Rangpur Dairy & Food Products Ltd."
+ },
+ {
+  "ticker": "RECKITTBEN",
+  "name": "Reckitt Benckiser (Bangladesh"
+ },
+ {
+  "ticker": "REGENTTEX",
+  "name": "Regent Textile Mills Limited"
+ },
+ {
+  "ticker": "RELIANCE1",
+  "name": "Reliance One the first scheme of Reliance Insurance Mutual Fund"
+ },
+ {
+  "ticker": "RELIANCINS",
+  "name": "Reliance Insurance PLC."
+ },
+ {
+  "ticker": "RENATA",
+  "name": "Renata PLC"
+ },
+ {
+  "ticker": "RENWICKJA",
+  "name": "Renwick Jajneswar & Co (Bd"
+ },
+ {
+  "ticker": "REPUBLIC",
+  "name": "Republic Insurance PLC."
+ },
+ {
+  "ticker": "RINGSHINE",
+  "name": "Ring Shine Textiles Limited"
+ },
+ {
+  "ticker": "ROBI",
+  "name": "Robi Axiata PLC."
+ },
+ {
+  "ticker": "RSRMSTEEL",
+  "name": "Ratanpur Steel Re-Rolling Mills Limited"
+ },
+ {
+  "ticker": "RUNNERAUTO",
+  "name": "Runner Automobiles PLC"
+ },
+ {
+  "ticker": "RUPALIBANK",
+  "name": "Rupali Bank PLC."
+ },
+ {
+  "ticker": "RUPALIINS",
+  "name": "Rupali Insurance Company Ltd."
+ },
+ {
+  "ticker": "RUPALILIFE",
+  "name": "Rupali Life Insurance Company Limited"
+ },
+ {
+  "ticker": "SAFKOSPINN",
+  "name": "Safko Spinnings Mills Ltd."
+ },
+ {
+  "ticker": "SAIFPOWER",
+  "name": "SAIF Powertec Limited"
+ },
+ {
+  "ticker": "SAIHAMCOT",
+  "name": "Saiham Cotton Mills Limited"
+ },
+ {
+  "ticker": "SAIHAMTEX",
+  "name": "Saiham Textile Mills Ltd."
+ },
+ {
+  "ticker": "SALAMCRST",
+  "name": "S. Alam Cold Rolled Steels Ltd."
+ },
+ {
+  "ticker": "SALVO",
+  "name": "Salvo Organic Industries PLC."
+ },
+ {
+  "ticker": "SAMATALETH",
+  "name": "Samata Leather Complex Ltd."
+ },
+ {
+  "ticker": "SAMORITA",
+  "name": "Samorita Hospital Limited"
+ },
+ {
+  "ticker": "SANDHANINS",
+  "name": "Sandhani Life Insurance Company Ltd."
+ },
+ {
+  "ticker": "SAPORTL",
+  "name": "Summit Alliance Port Limited"
+ },
+ {
+  "ticker": "SAVAREFR",
+  "name": "Savar Refractories Limited"
+ },
+ {
+  "ticker": "SBACBANK",
+  "name": "SBAC Bank PLC."
+ },
+ {
+  "ticker": "SEAPEARL",
+  "name": "Sea Pearl Beach Resort & Spa Limited"
+ },
+ {
+  "ticker": "SEB1PBOND",
+  "name": "Southeast Bank 1st Perpetual Bond"
+ },
+ {
+  "ticker": "SEMLFBSLGF",
+  "name": "SEML FBLSL Growth Fund"
+ },
+ {
+  "ticker": "SEMLIBBLSF",
+  "name": "SEML IBBL Shariah Fund"
+ },
+ {
+  "ticker": "SHAHJABANK",
+  "name": "Shahjalal Islami Bank PLC."
+ },
+ {
+  "ticker": "SHARPIND",
+  "name": "Sharp Industries PLC"
+ },
+ {
+  "ticker": "SHASHADNIM",
+  "name": "Shasha Denims PLC."
+ },
+ {
+  "ticker": "SHEPHERD",
+  "name": "Shepherd Industries PLC"
+ },
+ {
+  "ticker": "SHURWID",
+  "name": "Shurwid Industries Limited"
+ },
+ {
+  "ticker": "SHYAMPSUG",
+  "name": "Shyampur Sugar Mills Ltd."
+ },
+ {
+  "ticker": "SIBL",
+  "name": "Social Islami Bank PLC."
+ },
+ {
+  "ticker": "SICL",
+  "name": "Sikder Insurance Company Limited"
+ },
+ {
+  "ticker": "SILCOPHL",
+  "name": "Silco Pharmaceuticals Limited"
+ },
+ {
+  "ticker": "SILVAPHL",
+  "name": "Silva Pharmaceuticals Limited"
+ },
+ {
+  "ticker": "SIMTEX",
+  "name": "Simtex Industries PLC."
+ },
+ {
+  "ticker": "SINGERBD",
+  "name": "Singer Bangladesh Limited"
+ },
+ {
+  "ticker": "SINOBANGLA",
+  "name": "Sinobangla Industries Ltd."
+ },
+ {
+  "ticker": "SIPLC",
+  "name": "Sena Insurance PLC"
+ },
+ {
+  "ticker": "SJIBLPBOND",
+  "name": "SJIBL Mudaraba Perpetual Bond"
+ },
+ {
+  "ticker": "SKTRIMS",
+  "name": "SK Trims & Industries Limited"
+ },
+ {
+  "ticker": "SONALIANSH",
+  "name": "Sonali Aansh Industries Limited"
+ },
+ {
+  "ticker": "SONALILIFE",
+  "name": "Sonali Life Insurance PLC"
+ },
+ {
+  "ticker": "SONALIPAPR",
+  "name": "Sonali Paper & Board Mills Ltd."
+ },
+ {
+  "ticker": "SONARBAINS",
+  "name": "Sonar Bangla Insurance Ltd."
+ },
+ {
+  "ticker": "SONARGAON",
+  "name": "Sonargaon Textiles Ltd."
+ },
+ {
+  "ticker": "SOUTHEASTB",
+  "name": "Southeast Bank PLC"
+ },
+ {
+  "ticker": "SPCERAMICS",
+  "name": "Shinepukur Ceramics PLC."
+ },
+ {
+  "ticker": "SPCL",
+  "name": "Shahjibazar Power Co. Ltd."
+ },
+ {
+  "ticker": "SQUARETEXT",
+  "name": "Square Textiles PLC."
+ },
+ {
+  "ticker": "SQURPHARMA",
+  "name": "Square Pharmaceuticals PLC."
+ },
+ {
+  "ticker": "SSSTEEL",
+  "name": "S. S. Steel Limited"
+ },
+ {
+  "ticker": "STANCERAM",
+  "name": "Standard Ceramic Industries Ltd."
+ },
+ {
+  "ticker": "STANDARINS",
+  "name": "Standard Insurance PLC."
+ },
+ {
+  "ticker": "STANDBANKL",
+  "name": "Standard Islami Bank PLC."
+ },
+ {
+  "ticker": "STYLECRAFT",
+  "name": "Stylecraft Limited"
+ },
+ {
+  "ticker": "SUMITPOWER",
+  "name": "Summit Power Limited"
+ },
+ {
+  "ticker": "SUNLIFEINS",
+  "name": "Sunlife Insurance Company Limited"
+ },
+ {
+  "ticker": "TAKAFULINS",
+  "name": "Takaful Islami Insurance PLC"
+ },
+ {
+  "ticker": "TALLUSPIN",
+  "name": "Tallu Spinning Mills Ltd."
+ },
+ {
+  "ticker": "TAMIJTEX",
+  "name": "Tamijuddin Textile Mills PLC"
+ },
+ {
+  "ticker": "TB10Y0127",
+  "name": "10Y BGTB 18/01/2027"
+ },
+ {
+  "ticker": "TB10Y0130",
+  "name": "10Y BGTB 22/01/2030"
+ },
+ {
+  "ticker": "TB10Y0132",
+  "name": "10Y BGTB 19/01/2032"
+ },
+ {
+  "ticker": "TB10Y0135",
+  "name": "10Y BGTB 22/01/2035"
+ },
+ {
+  "ticker": "TB10Y0231",
+  "name": "10Y BGTB 17/02/2031"
+ },
+ {
+  "ticker": "TB10Y0234",
+  "name": "10Y BGTB 22/02/2034"
+ },
+ {
+  "ticker": "TB10Y0333",
+  "name": "10Y BGTB 15/03/2033"
+ },
+ {
+  "ticker": "TB10Y0335",
+  "name": "10Y BGTB 19/03/2035"
+ },
+ {
+  "ticker": "TB10Y0429",
+  "name": "10Y BGTB 17/04/2029"
+ },
+ {
+  "ticker": "TB10Y0434",
+  "name": "10Y BGTB 17/04/2034"
+ },
+ {
+  "ticker": "TB10Y0530",
+  "name": "10Y BGTB 07/05/2030"
+ },
+ {
+  "ticker": "TB10Y0531",
+  "name": "10Y BGTB 19/05/2031"
+ },
+ {
+  "ticker": "TB10Y0532",
+  "name": "10Y BGTB 25/05/2032"
+ },
+ {
+  "ticker": "TB10Y0535",
+  "name": "10Y BGTB 21/05/2035"
+ },
+ {
+  "ticker": "TB10Y0628",
+  "name": "10Y BGTB 20/06/2028"
+ },
+ {
+  "ticker": "TB10Y0629",
+  "name": "10Y BGTB 19/06/2029"
+ },
+ {
+  "ticker": "TB10Y0630",
+  "name": "10Y BGTB 17/06/2030"
+ },
+ {
+  "ticker": "TB10Y0632",
+  "name": "10Y BGTB 22/06/2032"
+ },
+ {
+  "ticker": "TB10Y0634",
+  "name": "10 Years BGTB 20/06/2034"
+ },
+ {
+  "ticker": "TB10Y0730",
+  "name": "10Y BGTB 22/07/2030"
+ },
+ {
+  "ticker": "TB10Y0731",
+  "name": "10Y BGTB 25/07/2031"
+ },
+ {
+  "ticker": "TB10Y0735",
+  "name": "10Y BGTB 23/07/2035"
+ },
+ {
+  "ticker": "TB10Y0829",
+  "name": "10Y BGTB 21/08/2029"
+ },
+ {
+  "ticker": "TB10Y0833",
+  "name": "10Y BGTB 16/08/2033"
+ },
+ {
+  "ticker": "TB10Y0932",
+  "name": "10Y BGTB 21/09/2032"
+ },
+ {
+  "ticker": "TB10Y1027",
+  "name": "10Y BGTB 18/10/2027"
+ },
+ {
+  "ticker": "TB10Y1030",
+  "name": "10Y BGTB 21/10/2030"
+ },
+ {
+  "ticker": "TB10Y1031",
+  "name": "10Y BGTB 19/10/2031"
+ },
+ {
+  "ticker": "TB10Y1128",
+  "name": "10Y BGTB 22/11/2028"
+ },
+ {
+  "ticker": "TB10Y1135",
+  "name": "10Y BGTB 19/11/2035"
+ },
+ {
+  "ticker": "TB10Y1229",
+  "name": "10Y BGTB 18/12/2029"
+ },
+ {
+  "ticker": "TB10Y1232",
+  "name": "10Y BGTB 21/12/2032"
+ },
+ {
+  "ticker": "TB15Y0127",
+  "name": "15Y BGTB 18/01/2027"
+ },
+ {
+  "ticker": "TB15Y0128",
+  "name": "15Y BGTB 16/01/2028"
+ },
+ {
+  "ticker": "TB15Y0129",
+  "name": "15Y BGTB 29/01/2029"
+ },
+ {
+  "ticker": "TB15Y0227",
+  "name": "15Y BGTB 22/02/2027"
+ },
+ {
+  "ticker": "TB15Y0228",
+  "name": "15Y BGTB 20/02/2028"
+ },
+ {
+  "ticker": "TB15Y0229",
+  "name": "15Y BGTB 26/02/2029"
+ },
+ {
+  "ticker": "TB15Y0327",
+  "name": "15Y BGTB 21/03/2027"
+ },
+ {
+  "ticker": "TB15Y0328",
+  "name": "15Y BGTB 20/03/2028"
+ },
+ {
+  "ticker": "TB15Y0329",
+  "name": "15Y BGTB 27/03/2029"
+ },
+ {
+  "ticker": "TB15Y0339",
+  "name": "15Y BGTB 27/03/2039"
+ },
+ {
+  "ticker": "TB15Y0340",
+  "name": "15Y BGTB 27/03/2040"
+ },
+ {
+  "ticker": "TB15Y0427",
+  "name": "15Y BGTB 18/04/2027"
+ },
+ {
+  "ticker": "TB15Y0428",
+  "name": "15Y BGTB 17/04/2028"
+ },
+ {
+  "ticker": "TB15Y0429",
+  "name": "15Y BGTB 23/04/2029"
+ },
+ {
+  "ticker": "TB15Y0431",
+  "name": "15Y BGTB 27/04/2031"
+ },
+ {
+  "ticker": "TB15Y0437",
+  "name": "15Y BGTB 27/04/2037"
+ },
+ {
+  "ticker": "TB15Y0527",
+  "name": "15Y BGTB 23/05/2027"
+ },
+ {
+  "ticker": "TB15Y0528",
+  "name": "15Y BGTB 22/05/2028"
+ },
+ {
+  "ticker": "TB15Y0529",
+  "name": "15Y BGTB 28/05/2029"
+ },
+ {
+  "ticker": "TB15Y0535",
+  "name": "15Y BGTB 13/05/2035"
+ },
+ {
+  "ticker": "TB15Y0627",
+  "name": "15Y BGTB 20/06/2027"
+ },
+ {
+  "ticker": "TB15Y0628",
+  "name": "15Y BGTB 19/06/2028"
+ },
+ {
+  "ticker": "TB15Y0629",
+  "name": "15Y BGTB 25/06/2029"
+ },
+ {
+  "ticker": "TB15Y0635",
+  "name": "15Y BGTB 24/06/2035"
+ },
+ {
+  "ticker": "TB15Y0637",
+  "name": "15Y BGTB 29/06/2037"
+ },
+ {
+  "ticker": "TB15Y0727",
+  "name": "15Y BGTB 18/07/2027"
+ },
+ {
+  "ticker": "TB15Y0728",
+  "name": "15Y BGTB 24/07/2028"
+ },
+ {
+  "ticker": "TB15Y0729",
+  "name": "15Y BGTB 23/07/2029"
+ },
+ {
+  "ticker": "TB15Y0730",
+  "name": "15Y BGTB 29/07/2030"
+ },
+ {
+  "ticker": "TB15Y0736",
+  "name": "15Y BGTB 28/07/2036"
+ },
+ {
+  "ticker": "TB15Y0828",
+  "name": "15Y BGTB 29/08/2028"
+ },
+ {
+  "ticker": "TB15Y0829",
+  "name": "15Y BGTB 27/08/2029"
+ },
+ {
+  "ticker": "TB15Y0840",
+  "name": "15Y BGTB 27/08/2040"
+ },
+ {
+  "ticker": "TB15Y0926",
+  "name": "15Y BGTB 21/09/2026"
+ },
+ {
+  "ticker": "TB15Y0927",
+  "name": "15Y BGTB 19/09/2027"
+ },
+ {
+  "ticker": "TB15Y0928",
+  "name": "15Y BGTB 25/09/2028"
+ },
+ {
+  "ticker": "TB15Y0929",
+  "name": "15Y BGTB 24/09/2029"
+ },
+ {
+  "ticker": "TB15Y0930",
+  "name": "15Y BGTB 23/09/2030"
+ },
+ {
+  "ticker": "TB15Y0933",
+  "name": "15Y BGTB 26/09/2033"
+ },
+ {
+  "ticker": "TB15Y1026",
+  "name": "15Y BGTB 19/10/2026"
+ },
+ {
+  "ticker": "TB15Y1027",
+  "name": "15Y BGTB 17/10/2027"
+ },
+ {
+  "ticker": "TB15Y1028",
+  "name": "15Y BGTB 23/10/2028"
+ },
+ {
+  "ticker": "TB15Y1029",
+  "name": "15Y BGTB 29/10/2029"
+ },
+ {
+  "ticker": "TB15Y1126",
+  "name": "15Y BGTB 16/11/2026"
+ },
+ {
+  "ticker": "TB15Y1127",
+  "name": "15Y BGTB 21/11/2027"
+ },
+ {
+  "ticker": "TB15Y1128",
+  "name": "15Y BGTB 27/11/2028"
+ },
+ {
+  "ticker": "TB15Y1129",
+  "name": "15Y BGTB 26/11/2029"
+ },
+ {
+  "ticker": "TB15Y1133",
+  "name": "15Y BGTB 28/11/2033"
+ },
+ {
+  "ticker": "TB15Y1226",
+  "name": "15Y BGTB 21/12/2026"
+ },
+ {
+  "ticker": "TB15Y1227",
+  "name": "15Y BGTB 19/12/2027"
+ },
+ {
+  "ticker": "TB15Y1228",
+  "name": "15Y BGTB 26/12/2028"
+ },
+ {
+  "ticker": "TB20Y0128",
+  "name": "20Y BGTB 23/01/2028"
+ },
+ {
+  "ticker": "TB20Y0129",
+  "name": "20Y BGTB 28/01/2029"
+ },
+ {
+  "ticker": "TB20Y0131",
+  "name": "20Y BGTB 26/01/2031"
+ },
+ {
+  "ticker": "TB20Y0132",
+  "name": "20Y BGTB 25/01/2032"
+ },
+ {
+  "ticker": "TB20Y0133",
+  "name": "20Y BGTB 23/01/2033"
+ },
+ {
+  "ticker": "TB20Y0134",
+  "name": "20Y BGTB 29/01/2034"
+ },
+ {
+  "ticker": "TB20Y0143",
+  "name": "20Y BGTB 25/01/2043"
+ },
+ {
+  "ticker": "TB20Y0228",
+  "name": "20Y BGTB 27/02/2028"
+ },
+ {
+  "ticker": "TB20Y0229",
+  "name": "20Y BGTB 25/02/2029"
+ },
+ {
+  "ticker": "TB20Y0230",
+  "name": "20Y BGTB 24/02/2030"
+ },
+ {
+  "ticker": "TB20Y0231",
+  "name": "20Y BGTB 23/02/2031"
+ },
+ {
+  "ticker": "TB20Y0232",
+  "name": "20Y BGTB 29/02/2032"
+ },
+ {
+  "ticker": "TB20Y0233",
+  "name": "20Y BGTB 27/02/2033"
+ },
+ {
+  "ticker": "TB20Y0234",
+  "name": "20Y BGTB 26/02/2034"
+ },
+ {
+  "ticker": "TB20Y0328",
+  "name": "20Y BGTB 27/03/2028"
+ },
+ {
+  "ticker": "TB20Y0329",
+  "name": "20Y BGTB 25/03/2029"
+ },
+ {
+  "ticker": "TB20Y0330",
+  "name": "20Y BGTB 24/03/2030"
+ },
+ {
+  "ticker": "TB20Y0331",
+  "name": "20Y BGTB 23/03/2031"
+ },
+ {
+  "ticker": "TB20Y0332",
+  "name": "20Y BGTB 28/03/2032"
+ },
+ {
+  "ticker": "TB20Y0333",
+  "name": "20Y BGTB 27/03/2033"
+ },
+ {
+  "ticker": "TB20Y0334",
+  "name": "20Y BGTB 27/03/2034"
+ },
+ {
+  "ticker": "TB20Y0342",
+  "name": "20Y BGTB 30/03/2042"
+ },
+ {
+  "ticker": "TB20Y0428",
+  "name": "20Y BGTB 23/04/2028"
+ },
+ {
+  "ticker": "TB20Y0429",
+  "name": "20Y BGTB 29/04/2029"
+ },
+ {
+  "ticker": "TB20Y0430",
+  "name": "20Y BGTB 28/04/2030"
+ },
+ {
+  "ticker": "TB20Y0431",
+  "name": "20Y BGTB 27/04/2031"
+ },
+ {
+  "ticker": "TB20Y0432",
+  "name": "20Y BGTB 25/04/2032"
+ },
+ {
+  "ticker": "TB20Y0433",
+  "name": "20Y BGTB 24/04/2033"
+ },
+ {
+  "ticker": "TB20Y0434",
+  "name": "20Y BGTB 23/04/2034"
+ },
+ {
+  "ticker": "TB20Y0436",
+  "name": "20Y BGTB 27/04/2036"
+ },
+ {
+  "ticker": "TB20Y0528",
+  "name": "20Y BGTB 28/05/2028"
+ },
+ {
+  "ticker": "TB20Y0529",
+  "name": "20Y BGTB 27/05/2029"
+ },
+ {
+  "ticker": "TB20Y0530",
+  "name": "20Y BGTB 26/05/2030"
+ },
+ {
+  "ticker": "TB20Y0531",
+  "name": "20Y BGTB 25/05/2031"
+ },
+ {
+  "ticker": "TB20Y0532",
+  "name": "20Y BGTB 30/05/2032"
+ },
+ {
+  "ticker": "TB20Y0533",
+  "name": "20Y BGTB 29/05/2033"
+ },
+ {
+  "ticker": "TB20Y0534",
+  "name": "20Y BGTB 28/05/2034"
+ },
+ {
+  "ticker": "TB20Y0540",
+  "name": "20Y BGTB 20/05/2040"
+ },
+ {
+  "ticker": "TB20Y0545",
+  "name": "20Y BGTB 28/05/2045"
+ },
+ {
+  "ticker": "TB20Y0628",
+  "name": "20Y BGTB 25/06/2028"
+ },
+ {
+  "ticker": "TB20Y0629",
+  "name": "20Y BGTB 24/06/2029"
+ },
+ {
+  "ticker": "TB20Y0630",
+  "name": "20Y BGTB 23/06/2030"
+ },
+ {
+  "ticker": "TB20Y0631",
+  "name": "20Y BGTB 29/06/2031"
+ },
+ {
+  "ticker": "TB20Y0632",
+  "name": "20Y BGTB 27/06/2032"
+ },
+ {
+  "ticker": "TB20Y0633",
+  "name": "20Y BGTB 26/06/2033"
+ },
+ {
+  "ticker": "TB20Y0634",
+  "name": "20Y BGTB 25/06/2034"
+ },
+ {
+  "ticker": "TB20Y0639",
+  "name": "20Y BGTB 26/06/2039"
+ },
+ {
+  "ticker": "TB20Y0640",
+  "name": "20Y BGTB 24/06/2040"
+ },
+ {
+  "ticker": "TB20Y0641",
+  "name": "20Y BGTB 30/06/2041"
+ },
+ {
+  "ticker": "TB20Y0642",
+  "name": "20Y BGTB 29/06/2042"
+ },
+ {
+  "ticker": "TB20Y0727",
+  "name": "20Y BGTB 25/07/2027"
+ },
+ {
+  "ticker": "TB20Y0728",
+  "name": "20Y BGTB 23/07/2028"
+ },
+ {
+  "ticker": "TB20Y0729",
+  "name": "20Y BGTB 29/07/2029"
+ },
+ {
+  "ticker": "TB20Y0730",
+  "name": "20Y BGTB 29/07/2030"
+ },
+ {
+  "ticker": "TB20Y0731",
+  "name": "20Y BGTB 27/07/2031"
+ },
+ {
+  "ticker": "TB20Y0732",
+  "name": "20Y BGTB 25/07/2032"
+ },
+ {
+  "ticker": "TB20Y0733",
+  "name": "20Y BGTB 24/07/2033"
+ },
+ {
+  "ticker": "TB20Y0734",
+  "name": "20Y BGTB 23/07/2034"
+ },
+ {
+  "ticker": "TB20Y0735",
+  "name": "20Y BGTB 29/07/2035"
+ },
+ {
+  "ticker": "TB20Y0744",
+  "name": "20Y BGTB 28/07/2044"
+ },
+ {
+  "ticker": "TB20Y0827",
+  "name": "20Y BGTB 29/08/2027"
+ },
+ {
+  "ticker": "TB20Y0828",
+  "name": "20Y BGTB 27/08/2028"
+ },
+ {
+  "ticker": "TB20Y0829",
+  "name": "20Y BGTB 26/08/2029"
+ },
+ {
+  "ticker": "TB20Y0830",
+  "name": "20Y BGTB 25/08/2030"
+ },
+ {
+  "ticker": "TB20Y0831",
+  "name": "20Y BGTB 24/08/2031"
+ },
+ {
+  "ticker": "TB20Y0832",
+  "name": "20Y BGTB 29/08/2032"
+ },
+ {
+  "ticker": "TB20Y0833",
+  "name": "20Y BGTB 29/08/2033"
+ },
+ {
+  "ticker": "TB20Y0834",
+  "name": "20Y BGTB 27/08/2034"
+ },
+ {
+  "ticker": "TB20Y0845",
+  "name": "20Y BGTB 27/08/2045"
+ },
+ {
+  "ticker": "TB20Y0927",
+  "name": "20Y BGTB 26/09/2027"
+ },
+ {
+  "ticker": "TB20Y0928",
+  "name": "20Y BGTB 24/09/2028"
+ },
+ {
+  "ticker": "TB20Y0930",
+  "name": "20Y BGTB 29/09/2030"
+ },
+ {
+  "ticker": "TB20Y0931",
+  "name": "20Y BGTB 28/09/2031"
+ },
+ {
+  "ticker": "TB20Y0932",
+  "name": "20Y BGTB 26/09/2032"
+ },
+ {
+  "ticker": "TB20Y0933",
+  "name": "20Y BGTB 25/09/2033"
+ },
+ {
+  "ticker": "TB20Y0934",
+  "name": "20Y BGTB 24/09/2034"
+ },
+ {
+  "ticker": "TB20Y1027",
+  "name": "20Y BGTB 24/10/2027"
+ },
+ {
+  "ticker": "TB20Y1028",
+  "name": "20Y BGTB 29/10/2028"
+ },
+ {
+  "ticker": "TB20Y1029",
+  "name": "20Y BGTB 28/10/2029"
+ },
+ {
+  "ticker": "TB20Y1030",
+  "name": "20Y BGTB 27/10/2030"
+ },
+ {
+  "ticker": "TB20Y1031",
+  "name": "20Y BGTB 26/10/2031"
+ },
+ {
+  "ticker": "TB20Y1032",
+  "name": "20Y BGTB 25/10/2032"
+ },
+ {
+  "ticker": "TB20Y1033",
+  "name": "20Y BGTB 23/10/2033"
+ },
+ {
+  "ticker": "TB20Y1034",
+  "name": "20Y BGTB 29/10/2034"
+ },
+ {
+  "ticker": "TB20Y1127",
+  "name": "20Y BGTB 28/11/2027"
+ },
+ {
+  "ticker": "TB20Y1128",
+  "name": "20Y BGTB 26/11/2028"
+ },
+ {
+  "ticker": "TB20Y1130",
+  "name": "20Y BGTB 24/11/2030"
+ },
+ {
+  "ticker": "TB20Y1131",
+  "name": "20Y BGTB 23/11/2031"
+ },
+ {
+  "ticker": "TB20Y1132",
+  "name": "20Y BGTB 28/11/2032"
+ },
+ {
+  "ticker": "TB20Y1133",
+  "name": "20Y BGTB 27/11/2033"
+ },
+ {
+  "ticker": "TB20Y1134",
+  "name": "20Y BGTB 26/11/2034"
+ },
+ {
+  "ticker": "TB20Y1135",
+  "name": "20Y BGTB 25/11/2035"
+ },
+ {
+  "ticker": "TB20Y1138",
+  "name": "20Y BGTB 28/11/2038"
+ },
+ {
+  "ticker": "TB20Y1227",
+  "name": "20Y BGTB 26/12/2027"
+ },
+ {
+  "ticker": "TB20Y1228",
+  "name": "20Y BGTB 24/12/2028"
+ },
+ {
+  "ticker": "TB20Y1229",
+  "name": "20Y BGTB 23/12/2029"
+ },
+ {
+  "ticker": "TB20Y1230",
+  "name": "20Y BGTB 29/12/2030"
+ },
+ {
+  "ticker": "TB20Y1231",
+  "name": "20Y BGTB 28/12/2031"
+ },
+ {
+  "ticker": "TB20Y1232",
+  "name": "20Y BGTB 26/12/2032"
+ },
+ {
+  "ticker": "TB20Y1233",
+  "name": "20Y BGTB 26/12/2033"
+ },
+ {
+  "ticker": "TB20Y1242",
+  "name": "20Y BGTB 28/12/2042"
+ },
+ {
+  "ticker": "TB2Y0127",
+  "name": "02Y BGTB 08/01/2027"
+ },
+ {
+  "ticker": "TB2Y0227",
+  "name": "02 Year BGTB 05/02/2027"
+ },
+ {
+  "ticker": "TB2Y0327",
+  "name": "02 Year BGTB 05/03/2027"
+ },
+ {
+  "ticker": "TB2Y0427",
+  "name": "02Y BGTB 09/04/2027"
+ },
+ {
+  "ticker": "TB2Y0527",
+  "name": "02Y BGTB 07/05/2027"
+ },
+ {
+  "ticker": "TB2Y0627",
+  "name": "02Y BGTB 04/06/2027"
+ },
+ {
+  "ticker": "TB2Y0727",
+  "name": "02Y BGTB 09/07/2027"
+ },
+ {
+  "ticker": "TB2Y0927",
+  "name": "02Y BGTB 03/09/2027"
+ },
+ {
+  "ticker": "TB2Y1026",
+  "name": "02Y BGTB 02/10/2026"
+ },
+ {
+  "ticker": "TB2Y1126",
+  "name": "02Y BGTB 06/11/2026"
+ },
+ {
+  "ticker": "TB2Y1127",
+  "name": "02Y BGTB 05/11/2027"
+ },
+ {
+  "ticker": "TB5Y0128",
+  "name": "5Y BGTB 11/01/2028"
+ },
+ {
+  "ticker": "TB5Y0230",
+  "name": "05Y BGTB 12/02/2030"
+ },
+ {
+  "ticker": "TB5Y0327",
+  "name": "05Y BGTB 16/03/2027"
+ },
+ {
+  "ticker": "TB5Y0428",
+  "name": "5Y BGTB 12/04/2028"
+ },
+ {
+  "ticker": "TB5Y0429",
+  "name": "05Y BGTB 15/04/2029"
+ },
+ {
+  "ticker": "TB5Y0430",
+  "name": "05Y BGTB 16/04/2030"
+ },
+ {
+  "ticker": "TB5Y0527",
+  "name": "05Y BGTB 18/05/2027"
+ },
+ {
+  "ticker": "TB5Y0529",
+  "name": "05Y BGTB 15/05/2029"
+ },
+ {
+  "ticker": "TB5Y0628",
+  "name": "5Y BGTB 14/06/2028"
+ },
+ {
+  "ticker": "TB5Y0630",
+  "name": "05Y BGTB 18/06/2030"
+ },
+ {
+  "ticker": "TB5Y0727",
+  "name": "5Y BGTB 13/07/2027"
+ },
+ {
+  "ticker": "TB5Y0828",
+  "name": "5Y BGTB 09/08/2028"
+ },
+ {
+  "ticker": "TB5Y0926",
+  "name": "05Y BGTB 15/09/2026"
+ },
+ {
+  "ticker": "TB5Y0928",
+  "name": "5Y BGTB 13/09/2028"
+ },
+ {
+  "ticker": "TB5Y0930",
+  "name": "05Y BGTB 10/09/2030"
+ },
+ {
+  "ticker": "TB5Y1029",
+  "name": "05Y BGTB 09/10/2029"
+ },
+ {
+  "ticker": "TB5Y1126",
+  "name": "05Y BGTB 10/11/2026"
+ },
+ {
+  "ticker": "TB5Y1127",
+  "name": "5Y BGTB 16/11/2027"
+ },
+ {
+  "ticker": "TB5Y1128",
+  "name": "5Y BGTB 15/11/2028"
+ },
+ {
+  "ticker": "TB5Y1130",
+  "name": "05Y BGTB 30/11/2030"
+ },
+ {
+  "ticker": "TB5Y1228",
+  "name": "5Y BGTB 13/12/2028"
+ },
+ {
+  "ticker": "TB5Y1229",
+  "name": "05Y BGTB 11/12/2029"
+ },
+ {
+  "ticker": "TECHNODRUG",
+  "name": "Techno Drugs Ltd."
+ },
+ {
+  "ticker": "TILIL",
+  "name": "Trust Islami Life Insurance PLC."
+ },
+ {
+  "ticker": "TITASGAS",
+  "name": "Titas Gas Transmission and Distribution PLC."
+ },
+ {
+  "ticker": "TOSRIFA",
+  "name": "Tosrifa Industries PLC."
+ },
+ {
+  "ticker": "TRUSTB1MF",
+  "name": "Trust Bank 1st Mutual Fund"
+ },
+ {
+  "ticker": "TRUSTBANK",
+  "name": "Trust Bank PLC."
+ },
+ {
+  "ticker": "TUNGHAI",
+  "name": "Tung Hai Knitting & Dyeing Limited"
+ },
+ {
+  "ticker": "UCB",
+  "name": "United Commercial Bank PLC"
+ },
+ {
+  "ticker": "UCB2PBOND",
+  "name": "UCB 2nd Perpetual Bond"
+ },
+ {
+  "ticker": "UNILEVERCL",
+  "name": "Unilever Consumer Care Limited"
+ },
+ {
+  "ticker": "UNIONBANK",
+  "name": "Union Bank PLC."
+ },
+ {
+  "ticker": "UNIONCAP",
+  "name": "Union Capital Limited"
+ },
+ {
+  "ticker": "UNIONINS",
+  "name": "Union Insurance PLC."
+ },
+ {
+  "ticker": "UNIQUEHRL",
+  "name": "Unique Hotel & Resorts PLC"
+ },
+ {
+  "ticker": "UNITEDFIN",
+  "name": "United Finance PLC."
+ },
+ {
+  "ticker": "UNITEDINS",
+  "name": "United Insurance Company Ltd."
+ },
+ {
+  "ticker": "UPGDCL",
+  "name": "United Power Generation & Distribution Company Ltd."
+ },
+ {
+  "ticker": "USMANIAGL",
+  "name": "Usmania Glass Sheet Factory Limited"
+ },
+ {
+  "ticker": "UTTARABANK",
+  "name": "Uttara Bank PLC."
+ },
+ {
+  "ticker": "UTTARAFIN",
+  "name": "Uttara Finance and Investments Limited"
+ },
+ {
+  "ticker": "VAMLBDMF1",
+  "name": "Vanguard AML BD Finance Mutual Fund One"
+ },
+ {
+  "ticker": "VAMLRBBF",
+  "name": "Vanguard AML Rupali Bank Balanced Fund"
+ },
+ {
+  "ticker": "VFSTDL",
+  "name": "VFS Thread Dyeing Limited"
+ },
+ {
+  "ticker": "WALTONHIL",
+  "name": "Walton Hi-Tech Industries PLC"
+ },
+ {
+  "ticker": "WATACHEM",
+  "name": "Wata Chemicals Limited"
+ },
+ {
+  "ticker": "WMSHIPYARD",
+  "name": "Western Marine Shipyard Limited"
+ },
+ {
+  "ticker": "YPL",
+  "name": "Yeakin Polymer Limited"
+ },
+ {
+  "ticker": "ZAHEENSPIN",
+  "name": "Zaheen Spinning PLC."
+ },
+ {
+  "ticker": "ZAHINTEX",
+  "name": "Zahintex Industries Limited"
+ },
+ {
+  "ticker": "ZEALBANGLA",
+  "name": "Zeal Bangla Sugar Mills Ltd."
+ }
+]

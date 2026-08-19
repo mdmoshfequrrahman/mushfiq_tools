@@ -138,6 +138,23 @@
   .alloc-total.ok { color: var(--green); }
   .alloc-total.bad { color: var(--red); }
 
+  .picker { position: relative; }
+  .picker input[data-k="picker"] { width: 100%; }
+  .picker-list {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 50;
+    max-height: 260px; overflow-y: auto;
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 10px; box-shadow: var(--shadow-hover);
+  }
+  .picker-item {
+    padding: 8px 12px; cursor: pointer; font-size: 13px;
+    display: flex; justify-content: space-between; gap: 10px; align-items: center;
+  }
+  .picker-item:hover, .picker-item.active { background: var(--accent-soft); }
+  .picker-item .pi-t { font-weight: 600; }
+  .picker-item .pi-n { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .picker-empty { padding: 10px 12px; color: var(--muted); font-size: 13px; }
+
   .perf-grid { display: grid; grid-template-columns: 260px 1fr; gap: 16px; align-items: stretch; }
   @media (max-width: 700px) { .perf-grid { grid-template-columns: 1fr; } }
   .donut-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 10px 0; }
@@ -293,6 +310,7 @@ const FALLBACK_PRICES = { SQURPHARMA: 218.8, BRACBANK: 62.8, GP: 249.8, EBL: 23.
 let PRICES = {};      // ticker -> last price
 let HISTORY = [];     // [{date, prices:{...}}]
 let LAST_UPDATED = null;
+let COMPANIES = [];   // [{ticker, name}] full DSE list for the picker
 
 const fmt = (n, d = 2) => Number(n || 0).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
 const bdt = (n) => '৳' + Number(n || 0).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -345,6 +363,31 @@ async function loadPrices() {
   } catch (e) {}
   PRICES = { ...FALLBACK_PRICES };
   return false;
+}
+
+async function loadCompanies() {
+  try {
+    const res = await fetch('data/companies.json', { cache: 'no-store' });
+    if (res.ok) {
+      const d = await res.json();
+      COMPANIES = Array.isArray(d) ? d : [];
+    }
+  } catch (e) {}
+  if (!COMPANIES.length) {
+    // minimal fallback so the picker still works offline
+    COMPANIES = [
+      { ticker: 'SQURPHARMA', name: 'Square Pharmaceuticals PLC.' },
+      { ticker: 'BRACBANK', name: 'BRAC Bank PLC.' },
+      { ticker: 'GP', name: 'Grameenphone Ltd.' },
+      { ticker: 'EBL', name: 'Eastern Bank PLC.' },
+      { ticker: 'BSRMSTEEL', name: 'BSRM Steels Limited' },
+      { ticker: 'MARICO', name: 'Marico Bangladesh Limited' },
+      { ticker: 'RENATA', name: 'Renata PLC' },
+      { ticker: 'CITYBANK', name: 'City Bank PLC.' },
+      { ticker: 'PUBALIBANK', name: 'Pubali Bank PLC.' },
+      { ticker: 'ACI', name: 'ACI Limited' }
+    ];
+  }
 }
 
 function priceOf(ticker) {
@@ -545,7 +588,11 @@ function renderSettingRows() {
     row.className = 'setting-row';
     row.innerHTML = `
       <input data-i="${i}" data-k="name" value="${c.name}" placeholder="Company">
-      <input data-i="${i}" data-k="ticker" value="${c.ticker}" placeholder="Ticker" oninput="this.value=this.value.toUpperCase()">
+      <div class="picker">
+        <input data-i="${i}" data-k="ticker" value="${c.ticker}" placeholder="Type ticker…"
+               onfocus="openPicker(this)" oninput="filterPicker(this)"
+               onkeydown="pickerKeydown(event, this)" autocomplete="off">
+      </div>
       <input data-i="${i}" data-k="pct" type="number" step="0.5" min="0" max="100" value="${c.pct}" placeholder="%">
       <input data-i="${i}" data-k="role" value="${c.role}" placeholder="Role">
       <button class="btn btn-danger btn-sm" onclick="removeCompanyRow(${i})">✕</button>
@@ -556,14 +603,103 @@ function renderSettingRows() {
 }
 
 function addCompanyRow() {
-  state.companies.push({ name: 'New Company', ticker: 'NEW', pct: 0, role: '' });
+  state.companies.push({ name: '', ticker: '', pct: 0, role: '' });
   renderSettingRows();
+  const inputs = document.querySelectorAll('#settingRows input[data-k="ticker"]');
+  const last = inputs[inputs.length - 1];
+  if (last) { last.focus(); openPicker(last); }
 }
 
 function removeCompanyRow(i) {
   state.companies.splice(i, 1);
   renderSettingRows();
 }
+
+/* ---- searchable company picker ---- */
+function openPicker(input) {
+  closeAllPickers(input);
+  const box = document.createElement('div');
+  box.className = 'picker-list';
+  box.dataset.for = 'pkr_' + input.getAttribute('data-i');
+  input.parentElement.appendChild(box);
+  renderPickerResults(input);
+}
+
+function closeAllPickers(except) {
+  document.querySelectorAll('.picker-list').forEach(el => {
+    if (!except || el !== except.parentElement.querySelector('.picker-list')) el.remove();
+  });
+}
+
+function renderPickerResults(input) {
+  const box = input.parentElement.querySelector('.picker-list');
+  if (!box) return;
+  const q = (input.value || '').trim().toLowerCase();
+  const maxShow = 60;
+  const matched = COMPANIES
+    .filter(c => !q || c.ticker.toLowerCase().includes(q) || c.name.toLowerCase().includes(q))
+    .slice(0, maxShow);
+
+  if (!matched.length) {
+    box.innerHTML = '<div class="picker-empty">No matches. Type the ticker manually.</div>';
+    return;
+  }
+  box.innerHTML = matched.map((c, idx) => `
+    <div class="picker-item" data-ticker="${c.ticker}" data-name="${c.name.replace(/"/g, '&quot;')}"
+         data-idx="${idx}" onmousedown="event.preventDefault(); pickCompany(this, '${input.getAttribute('data-i')}')">
+      <span class="pi-t">${c.ticker}</span>
+      <span class="pi-n">${c.name}</span>
+    </div>
+  `).join('');
+  box._results = matched;
+  box._active = 0;
+  if (box.querySelector('.picker-item')) box.querySelector('.picker-item').classList.add('active');
+}
+
+function filterPicker(input) {
+  renderPickerResults(input);
+}
+
+function pickCompany(el, rowIndex) {
+  const ticker = el.getAttribute('data-ticker');
+  const name = el.getAttribute('data-name');
+  const row = document.querySelector(`#settingRows .setting-row:nth-child(${Number(rowIndex) + 1})`);
+  if (!row) return;
+  row.querySelector('input[data-k="ticker"]').value = ticker;
+  row.querySelector('input[data-k="name"]').value = name;
+  closeAllPickers(null);
+  updateAllocTotal();
+}
+
+function pickerKeydown(e, input) {
+  const box = input.parentElement.querySelector('.picker-list');
+  if (!box) { if (e.key === 'ArrowDown') openPicker(input); return; }
+  const items = box.querySelectorAll('.picker-item');
+  let active = parseInt(box._active || 0, 10);
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    active = Math.min(active + 1, items.length - 1);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    active = Math.max(active - 1, 0);
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (items[active]) pickCompany(items[active], input.getAttribute('data-i'));
+    return;
+  } else if (e.key === 'Escape') {
+    closeAllPickers(null);
+    return;
+  } else {
+    return;
+  }
+  box._active = active;
+  items.forEach((it, idx) => it.classList.toggle('active', idx === active));
+  items[active] && items[active].scrollIntoView({ block: 'nearest' });
+}
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.picker')) closeAllPickers(null);
+});
 
 function updateAllocTotal() {
   const inputs = document.querySelectorAll('#settingRows input[data-k="pct"]');
@@ -615,6 +751,7 @@ function resetSettings() {
 
 async function init(force = false) {
   const fresh = await loadPrices();
+  await loadCompanies();
   updateBadge(fresh);
   syncInputs();
   renderGuide();
