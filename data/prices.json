@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-19T14:41:32+00:00",
+  "lastUpdated": "2026-08-19T15:39:15+00:00",
   "prices": {
     "ACI": 196.1,
     "ACIFORMULA": 167.7,
@@ -23,7 +23,6 @@
     "JAMUNAOIL": 178.7,
     "KDSALTD": 48.3,
     "MARICO": 2724.0,
-    "MEGHNAPET": 82.8,
     "MONNOCERA": 89.6,
     "NCCBANK": 15.2,
     "OLYMPIC": 147.0,
@@ -40,7 +39,8 @@
     "SQUARETEXT": 51.2,
     "SQURPHARMA": 218.8,
     "SUMITPOWER": 16.6,
-    "WALTONHIL": 388.0
+    "WALTONHIL": 388.0,
+    "MEGHNAPET": 82.8
   },
   "history": [
     {
@@ -78,7 +78,6 @@
         "JAMUNAOIL": 178.7,
         "KDSALTD": 48.3,
         "MARICO": 2724.0,
-        "MEGHNAPET": 82.8,
         "MONNOCERA": 89.6,
         "NCCBANK": 15.2,
         "OLYMPIC": 147.0,
@@ -95,7 +94,8 @@
         "SQUARETEXT": 51.2,
         "SQURPHARMA": 218.8,
         "SUMITPOWER": 16.6,
-        "WALTONHIL": 388.0
+        "WALTONHIL": 388.0,
+        "MEGHNAPET": 82.8
       }
     }
   ]
