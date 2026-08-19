@@ -124,6 +124,22 @@ def parse_price(html):
         return None
 
 
+def parse_52w_range(html):
+    """Extract the 52 Weeks' Moving Range as (low, high) or None."""
+    m = re.search(
+        r"52 Weeks' Moving Range</th>\s*<td[^>]*>\s*([\d,.]+)\s*-\s*([\d,.]+)",
+        html,
+    )
+    if not m:
+        return None
+    try:
+        low = float(m.group(1).replace(",", ""))
+        high = float(m.group(2).replace(",", ""))
+        return (low, high)
+    except ValueError:
+        return None
+
+
 def load_existing():
     if os.path.exists(DATA_FILE):
         try:
@@ -137,6 +153,7 @@ def load_existing():
 def main():
     tickers = get_tickers()
     prices = {}
+    ranges = {}
     for ticker in tickers:
         try:
             html = fetch_html(BASE_URL.format(ticker))
@@ -146,6 +163,9 @@ def main():
                 print(f"{ticker}: {price}")
             else:
                 print(f"{ticker}: parse failed", file=sys.stderr)
+            rng = parse_52w_range(html)
+            if rng:
+                ranges[ticker] = {"low": rng[0], "high": rng[1]}
         except Exception as exc:
             print(f"{ticker}: error {exc}", file=sys.stderr)
 
@@ -172,6 +192,7 @@ def main():
             prices[t] = data["prices"][t]
 
     data["prices"] = prices
+    data["ranges"] = ranges
     data["lastUpdated"] = now
 
     # append a history snapshot (one per UTC day)

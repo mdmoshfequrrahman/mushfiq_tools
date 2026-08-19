@@ -155,28 +155,8 @@
   .picker-item .pi-n { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .picker-empty { padding: 10px 12px; color: var(--muted); font-size: 13px; }
 
-  .perf-grid { display: grid; grid-template-columns: 260px 1fr; gap: 16px; align-items: stretch; }
-  @media (max-width: 700px) { .perf-grid { grid-template-columns: 1fr; } }
-  .donut-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 10px 0; }
-  .donut {
-    width: 180px; height: 180px; border-radius: 50%;
-    position: relative; box-shadow: inset 0 0 0 1px rgba(16,24,40,0.06);
-  }
-  .donut-center {
-    position: absolute; inset: 22px; border-radius: 50%;
-    background: var(--card); display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    box-shadow: var(--shadow);
-  }
-  .donut-center .v { font-size: 18px; font-weight: 700; color: var(--text); }
-  .donut-center .l { font-size: 11px; color: var(--muted); }
-  .legend { width: 100%; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
-  .legend-row { display: flex; align-items: center; gap: 8px; }
-  .legend-row .swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
-  .legend-row .name { flex: 1; color: var(--text); }
-  .legend-row .pct { color: var(--muted); font-variant-numeric: tabular-nums; }
-
-  .perf-cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .perf-grid { display: grid; grid-template-columns: 1fr; gap: 12px; align-items: stretch; }
+  .perf-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
   .perf-card {
     background: var(--card); border: 1px solid var(--card-border);
     border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow);
@@ -189,6 +169,23 @@
   .chg.flat { color: var(--muted); }
   .perf-card .row2 { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; color: var(--muted); font-size: 12.5px; }
   .spark { width: 100%; height: 34px; margin-top: 8px; display: block; }
+
+  .performer-list { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .performer {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 10px; padding: 10px 14px;
+    transition: border-color 0.2s;
+  }
+  .performer:hover { border-color: rgba(14,165,233,0.4); }
+  .performer .p-left { min-width: 0; }
+  .performer .p-name { font-weight: 600; font-size: 13.5px; color: var(--text); }
+  .performer .p-sub { color: var(--muted); font-size: 12px; margin-top: 1px; }
+  .performer .p-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+  .performer .p-gain { font-weight: 700; font-size: 14px; text-align: right; }
+  .performer .p-gain small { display: block; font-weight: 500; font-size: 11px; color: var(--muted); }
+  .performer .btn { padding: 6px 12px; font-size: 12px; }
+  .performer.selected .btn { opacity: 0.55; cursor: default; }
 
   .note {
     background: var(--card); border: 1px solid var(--card-border);
@@ -278,11 +275,16 @@
 
   <!-- Performance -->
   <div class="panel">
-    <h2>📊 Performance Dashboard</h2>
-    <div class="perf-grid">
-      <div class="donut-wrap" id="donutWrap"></div>
-      <div class="perf-cards" id="perfCards"></div>
-    </div>
+    <h2>📊 Recent Performance</h2>
+    <p class="sub" style="margin-bottom:14px">My selected companies — change vs previous snapshot</p>
+    <div class="perf-cards" id="perfCards"></div>
+  </div>
+
+  <!-- Best performers -->
+  <div class="panel">
+    <h2>🏆 Best Performers (52-week)</h2>
+    <p class="sub" style="margin-bottom:14px">Biggest gainers from their 52-week low — tap + to add to your portfolio</p>
+    <div class="performer-list" id="performerList"></div>
   </div>
 
   <div class="note">
@@ -309,6 +311,7 @@ const FALLBACK_PRICES = { SQURPHARMA: 218.8, BRACBANK: 62.8, GP: 249.8, EBL: 23.
 
 let PRICES = {};      // ticker -> last price
 let HISTORY = [];     // [{date, prices:{...}}]
+let RANGES = {};      // ticker -> {low, high} 52-week
 let LAST_UPDATED = null;
 let COMPANIES = [];   // [{ticker, name}] full DSE list for the picker
 
@@ -357,6 +360,7 @@ async function loadPrices() {
       const d = await res.json();
       PRICES = (d && d.prices) || {};
       HISTORY = Array.isArray(d && d.history) ? d.history : [];
+      RANGES = (d && d.ranges) || {};
       LAST_UPDATED = (d && d.lastUpdated) || null;
       return true;
     }
@@ -466,36 +470,6 @@ function renderGuide() {
 }
 
 function renderPerformance() {
-  const wrap = document.getElementById('donutWrap');
-  let acc = 0;
-  const segs = state.companies.map(c => {
-    const pct = allocPct(c);
-    const start = acc, end = acc + pct;
-    acc = end;
-    return { c, pct, start, end };
-  });
-  const colors = ['#0ea5e9', '#6366f1', '#16a34a', '#f59e0b', '#ec4899', '#8b5cf6', '#10b981', '#f97316'];
-  const gradient = segs.map((s, i) => `${colors[i % colors.length]} ${s.start}% ${s.end}%`).join(', ');
-  const totalAlloc = segs.reduce((a, s) => a + s.pct, 0);
-
-  let legend = '';
-  segs.forEach((s, i) => {
-    legend += `<div class="legend-row">
-      <span class="swatch" style="background:${colors[i % colors.length]}"></span>
-      <span class="name">${s.c.name}</span>
-      <span class="pct">${s.pct.toFixed(1)}%</span>
-    </div>`;
-  });
-  wrap.innerHTML = `
-    <div class="donut" style="background: conic-gradient(${gradient});">
-      <div class="donut-center">
-        <div class="v">${totalAlloc.toFixed(0)}%</div>
-        <div class="l">Allocation</div>
-      </div>
-    </div>
-    <div class="legend">${legend}</div>
-  `;
-
   const cards = document.getElementById('perfCards');
   cards.innerHTML = '';
   const latestDay = HISTORY.length ? HISTORY[HISTORY.length - 1] : null;
@@ -517,6 +491,20 @@ function renderPerformance() {
     const series = HISTORY.map(h => h.prices && h.prices[c.ticker] != null ? h.prices[c.ticker] : null).filter(v => v != null);
     const sparkSvg = series.length >= 2 ? buildSparkline(series) : '<span class="muted-cell">No history yet</span>';
 
+    // 52-week position bar
+    let posBar = '';
+    const rng = RANGES[c.ticker];
+    if (rng && rng.low && rng.high && price != null) {
+      const pos = Math.min(100, Math.max(0, ((price - rng.low) / (rng.high - rng.low)) * 100));
+      posBar = `
+        <div style="margin-top:8px;height:5px;border-radius:99px;background:var(--bg-soft);overflow:hidden;position:relative">
+          <div style="width:${pos.toFixed(1)}%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:99px"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-top:3px">
+          <span>52w ${fmt(rng.low)}</span><span>${fmt(rng.high)}</span>
+        </div>`;
+    }
+
     const card = document.createElement('div');
     card.className = 'perf-card';
     card.innerHTML = `
@@ -529,9 +517,72 @@ function renderPerformance() {
         <span>${latestDay ? latestDay.date : ''}</span>
       </div>
       ${sparkSvg}
+      ${posBar}
     `;
     cards.appendChild(card);
   });
+}
+
+function renderPerformers() {
+  const list = document.getElementById('performerList');
+  list.innerHTML = '';
+
+  const rows = [];
+  Object.keys(RANGES).forEach(t => {
+    const rng = RANGES[t];
+    const price = PRICES[t];
+    if (!rng || !rng.low || !price) return;
+    const gain = ((price - rng.low) / rng.low) * 100;
+    const name = companyNameOf(t);
+    rows.push({ t, name, price, low: rng.low, high: rng.high, gain });
+  });
+  rows.sort((a, b) => b.gain - a.gain);
+  const top = rows.slice(0, 12);
+
+  if (!top.length) {
+    list.innerHTML = '<div class="picker-empty">No performer data yet — prices will populate soon.</div>';
+    return;
+  }
+
+  const held = new Set(state.companies.map(c => c.ticker));
+  top.forEach(r => {
+    const selected = held.has(r.t);
+    const el = document.createElement('div');
+    el.className = 'performer' + (selected ? ' selected' : '');
+    el.innerHTML = `
+      <div class="p-left">
+        <div class="p-name">${r.name}</div>
+        <div class="p-sub">${r.t} · now ${fmt(r.price)} · 52w low ${fmt(r.low)}</div>
+      </div>
+      <div class="p-right">
+        <span class="p-gain ${r.gain >= 0 ? 'chg up' : 'chg down'}">${r.gain >= 0 ? '+' : ''}${r.gain.toFixed(1)}%<small>from low</small></span>
+        <button class="btn btn-ghost btn-sm" onclick="addPerformer('${r.t}')">${selected ? '✓ In' : '+ Add'}</button>
+      </div>
+    `;
+    list.appendChild(el);
+  });
+}
+
+function companyNameOf(ticker) {
+  const c = COMPANIES.find(x => x.ticker === ticker);
+  if (c) return c.name;
+  const p = state.companies.find(x => x.ticker === ticker);
+  return p ? p.name : ticker;
+}
+
+function addPerformer(ticker) {
+  if (state.companies.some(c => c.ticker === ticker)) { alert(ticker + ' is already in your portfolio.'); return; }
+  const name = companyNameOf(ticker);
+  // take 5% from the largest allocation to keep total at 100
+  const max = [...state.companies].sort((a, b) => b.pct - a.pct)[0];
+  if (!max || max.pct < 6) { alert('Re-balance first: reduce an allocation below 100% total.'); return; }
+  max.pct = Math.round((max.pct - 5) * 10) / 10;
+  state.companies.push({ name, ticker, pct: 5, role: 'Added from performers' });
+  saveState();
+  renderGuide();
+  renderPerformance();
+  renderPerformers();
+  alert(name + ' added at 5%. Check Settings to fine-tune.');
 }
 
 function buildSparkline(series) {
@@ -742,6 +793,7 @@ function saveSettings() {
   toggleSettings();
   renderGuide();
   renderPerformance();
+  renderPerformers();
 }
 
 function resetSettings() {
@@ -752,6 +804,7 @@ function resetSettings() {
   toggleSettings();
   renderGuide();
   renderPerformance();
+  renderPerformers();
 }
 
 async function init(force = false) {
@@ -761,6 +814,7 @@ async function init(force = false) {
   syncInputs();
   renderGuide();
   renderPerformance();
+  renderPerformers();
 }
 
 // live-update budget inputs in the guide

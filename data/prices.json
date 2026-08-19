@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-19T15:39:15+00:00",
+  "lastUpdated": "2026-08-19T15:47:31+00:00",
   "prices": {
     "ACI": 196.1,
     "ACIFORMULA": 167.7,
@@ -23,6 +23,7 @@
     "JAMUNAOIL": 178.7,
     "KDSALTD": 48.3,
     "MARICO": 2724.0,
+    "MEGHNAPET": 82.8,
     "MONNOCERA": 89.6,
     "NCCBANK": 15.2,
     "OLYMPIC": 147.0,
@@ -39,8 +40,7 @@
     "SQUARETEXT": 51.2,
     "SQURPHARMA": 218.8,
     "SUMITPOWER": 16.6,
-    "WALTONHIL": 388.0,
-    "MEGHNAPET": 82.8
+    "WALTONHIL": 388.0
   },
   "history": [
     {
@@ -78,6 +78,7 @@
         "JAMUNAOIL": 178.7,
         "KDSALTD": 48.3,
         "MARICO": 2724.0,
+        "MEGHNAPET": 82.8,
         "MONNOCERA": 89.6,
         "NCCBANK": 15.2,
         "OLYMPIC": 147.0,
@@ -94,9 +95,170 @@
         "SQUARETEXT": 51.2,
         "SQURPHARMA": 218.8,
         "SUMITPOWER": 16.6,
-        "WALTONHIL": 388.0,
-        "MEGHNAPET": 82.8
+        "WALTONHIL": 388.0
       }
     }
-  ]
+  ],
+  "ranges": {
+    "ACI": {
+      "low": 165.1,
+      "high": 231.0
+    },
+    "ACIFORMULA": {
+      "low": 115.0,
+      "high": 189.2
+    },
+    "ALARABANK": {
+      "low": 12.0,
+      "high": 18.5
+    },
+    "AMANFEED": {
+      "low": 21.2,
+      "high": 41.4
+    },
+    "BERGERPBL": {
+      "low": 1335.9,
+      "high": 1561.9
+    },
+    "BRACBANK": {
+      "low": 60.0,
+      "high": 89.6
+    },
+    "BSCPLC": {
+      "low": 117.0,
+      "high": 169.1
+    },
+    "BSRMLTD": {
+      "low": 71.5,
+      "high": 115.0
+    },
+    "BSRMSTEEL": {
+      "low": 55.0,
+      "high": 102.0
+    },
+    "CITYBANK": {
+      "low": 22.6,
+      "high": 33.9
+    },
+    "DBH": {
+      "low": 31.5,
+      "high": 45.2
+    },
+    "DELTALIFE": {
+      "low": 60.8,
+      "high": 93.5
+    },
+    "DUTCHBANGL": {
+      "low": 36.1,
+      "high": 51.7
+    },
+    "EBL": {
+      "low": 21.8,
+      "high": 28.9
+    },
+    "FUWANGCER": {
+      "low": 9.8,
+      "high": 17.8
+    },
+    "GP": {
+      "low": 237.4,
+      "high": 311.9
+    },
+    "HEIDELBCEM": {
+      "low": 197.0,
+      "high": 272.7
+    },
+    "IPDC": {
+      "low": 17.5,
+      "high": 36.5
+    },
+    "ISLAMIBANK": {
+      "low": 23.9,
+      "high": 56.2
+    },
+    "JAMUNAOIL": {
+      "low": 164.9,
+      "high": 195.0
+    },
+    "KDSALTD": {
+      "low": 35.9,
+      "high": 55.9
+    },
+    "MARICO": {
+      "low": 2610.0,
+      "high": 2949.8
+    },
+    "MEGHNAPET": {
+      "low": 17.3,
+      "high": 101.9
+    },
+    "MONNOCERA": {
+      "low": 67.3,
+      "high": 112.0
+    },
+    "NCCBANK": {
+      "low": 10.5,
+      "high": 17.7
+    },
+    "OLYMPIC": {
+      "low": 128.0,
+      "high": 173.5
+    },
+    "PADMAOIL": {
+      "low": 163.8,
+      "high": 205.5
+    },
+    "POWERGRID": {
+      "low": 25.6,
+      "high": 42.8
+    },
+    "PRIMELIFE": {
+      "low": 27.0,
+      "high": 54.6
+    },
+    "PUBALIBANK": {
+      "low": 25.5,
+      "high": 44.0
+    },
+    "RAKCERAMIC": {
+      "low": 19.2,
+      "high": 32.8
+    },
+    "RECKITTBEN": {
+      "low": 3245.0,
+      "high": 3700.0
+    },
+    "RENATA": {
+      "low": 372.0,
+      "high": 547.0
+    },
+    "RUPALIBANK": {
+      "low": 15.2,
+      "high": 25.9
+    },
+    "RUPALILIFE": {
+      "low": 65.9,
+      "high": 132.0
+    },
+    "SINGERBD": {
+      "low": 72.0,
+      "high": 117.0
+    },
+    "SQUARETEXT": {
+      "low": 45.1,
+      "high": 57.7
+    },
+    "SQURPHARMA": {
+      "low": 198.0,
+      "high": 236.0
+    },
+    "SUMITPOWER": {
+      "low": 12.0,
+      "high": 17.9
+    },
+    "WALTONHIL": {
+      "low": 356.8,
+      "high": 528.0
+    }
+  }
 }
