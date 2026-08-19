@@ -316,6 +316,7 @@ const FALLBACK_PRICES = { SQURPHARMA: 218.8, BRACBANK: 62.8, GP: 249.8, EBL: 23.
 let PRICES = {};      // ticker -> last price
 let HISTORY = [];     // [{date, prices:{...}}]
 let RANGES = {};      // ticker -> {low, high} 52-week
+let PREV_CLOSE = {};  // ticker -> yesterday's closing price
 let LAST_UPDATED = null;
 let COMPANIES = [];   // [{ticker, name}] full DSE list for the picker
 
@@ -365,6 +366,7 @@ async function loadPrices() {
       PRICES = (d && d.prices) || {};
       HISTORY = Array.isArray(d && d.history) ? d.history : [];
       RANGES = (d && d.ranges) || {};
+      PREV_CLOSE = (d && d.prevClose) || {};
       LAST_UPDATED = (d && d.lastUpdated) || null;
       return true;
     }
@@ -477,13 +479,17 @@ function renderPerformance() {
   const cards = document.getElementById('perfCards');
   cards.innerHTML = '';
   const latestDay = HISTORY.length ? HISTORY[HISTORY.length - 1] : null;
-  const prevDay = HISTORY.length > 1 ? HISTORY[HISTORY.length - 2] : null;
 
   state.companies.forEach(c => {
     const price = priceOf(c.ticker);
+    // Daily change vs yesterday's closing price (fallback: previous snapshot)
     let changePct = null, changeVal = null;
-    if (price != null && prevDay && prevDay.prices && prevDay.prices[c.ticker] != null) {
-      const prev = prevDay.prices[c.ticker];
+    let prev = PREV_CLOSE[c.ticker];
+    if (prev == null) {
+      const prevDay = HISTORY.length > 1 ? HISTORY[HISTORY.length - 2] : null;
+      if (prevDay && prevDay.prices && prevDay.prices[c.ticker] != null) prev = prevDay.prices[c.ticker];
+    }
+    if (price != null && prev != null) {
       changePct = prev > 0 ? ((price - prev) / prev) * 100 : 0;
       changeVal = price - prev;
     }
@@ -577,16 +583,40 @@ function companyNameOf(ticker) {
 function addPerformer(ticker) {
   if (state.companies.some(c => c.ticker === ticker)) { alert(ticker + ' is already in your portfolio.'); return; }
   const name = companyNameOf(ticker);
-  // take 5% from the largest allocation to keep total at 100
-  const max = [...state.companies].sort((a, b) => b.pct - a.pct)[0];
-  if (!max || max.pct < 6) { alert('Re-balance first: reduce an allocation below 100% total.'); return; }
-  max.pct = Math.round((max.pct - 5) * 10) / 10;
-  state.companies.push({ name, ticker, pct: 5, role: 'Added from performers' });
+
+  const input = prompt(`Allocation % for ${name}? (Existing companies will be scaled down proportionally to keep the total at 100%.)`, '5');
+  if (input == null) return; // cancelled
+  const pct = parseFloat(input);
+  if (isNaN(pct) || pct <= 0) { alert('Please enter a positive percentage.'); return; }
+  if (pct >= 100) { alert('Allocation must be less than 100%.'); return; }
+
+  // proportionally scale down existing companies so their sum = (100 - pct)
+  const existingTotal = state.companies.reduce((a, c) => a + (Number(c.pct) || 0), 0);
+  if (existingTotal <= 0) {
+    state.companies = [{ name, ticker, pct: 100, role: 'Added from performers' }];
+  } else {
+    const factor = (100 - pct) / existingTotal;
+    state.companies = state.companies.map(c => ({
+      ...c,
+      pct: Math.round((Number(c.pct) || 0) * factor * 10) / 10
+    }));
+    // fix rounding drift: keep the largest at exactly the remainder
+    const sum = state.companies.reduce((a, c) => a + c.pct, 0);
+    const diff = Math.round((100 - pct - sum) * 10) / 10;
+    if (Math.abs(diff) > 0.05) {
+      const biggest = [...state.companies].sort((a, b) => b.pct - a.pct)[0];
+      biggest.pct = Math.round((biggest.pct + diff) * 10) / 10;
+    }
+    state.companies.push({ name, ticker, pct: Math.round(pct * 10) / 10, role: 'Added from performers' });
+  }
+
   saveState();
   renderGuide();
   renderPerformance();
   renderPerformers();
-  alert(name + ' added at 5%. Check Settings to fine-tune.');
+  toggleSettings();
+  renderSettingRows();
+  alert(name + ' added at ' + pct + '%. All existing allocations were scaled down proportionally — check Settings to fine-tune.');
 }
 
 function buildSparkline(series) {

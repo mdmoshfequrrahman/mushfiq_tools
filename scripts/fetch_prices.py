@@ -124,6 +124,19 @@ def parse_price(html):
         return None
 
 
+def parse_prev_close(html):
+    """Extract Yesterday's Closing Price, or None."""
+    m = re.search(
+        r"Yesterday's Closing Price</th>\s*<td[^>]*>([\d,.]+)\s*</td>", html
+    )
+    if not m:
+        return None
+    try:
+        return float(m.group(1).replace(",", ""))
+    except ValueError:
+        return None
+
+
 def parse_52w_range(html):
     """Extract the 52 Weeks' Moving Range as (low, high) or None."""
     m = re.search(
@@ -154,6 +167,7 @@ def main():
     tickers = get_tickers()
     prices = {}
     ranges = {}
+    prev_close = {}
     for ticker in tickers:
         try:
             html = fetch_html(BASE_URL.format(ticker))
@@ -166,6 +180,9 @@ def main():
             rng = parse_52w_range(html)
             if rng:
                 ranges[ticker] = {"low": rng[0], "high": rng[1]}
+            pc = parse_prev_close(html)
+            if pc:
+                prev_close[ticker] = pc
         except Exception as exc:
             print(f"{ticker}: error {exc}", file=sys.stderr)
 
@@ -193,6 +210,7 @@ def main():
 
     data["prices"] = prices
     data["ranges"] = ranges
+    data["prevClose"] = prev_close
     data["lastUpdated"] = now
 
     # append a history snapshot (one per UTC day)
