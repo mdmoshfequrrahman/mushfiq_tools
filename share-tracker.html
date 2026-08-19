@@ -6,24 +6,31 @@
 <title>Share Portfolio Tracker · Mushfiq's Tools</title>
 <style>
   :root {
-    --bg: #0b0f1a;
-    --card: rgba(255,255,255,0.04);
-    --card-border: rgba(255,255,255,0.08);
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    --accent: #22d3ee;
-    --accent-2: #818cf8;
-    --green: #34d399;
-    --red: #f87171;
-    --amber: #fbbf24;
+    --bg: #f4f6fb;
+    --bg-soft: #eef1f8;
+    --card: #ffffff;
+    --card-border: #e5e9f2;
+    --shadow: 0 1px 2px rgba(16,24,40,0.04), 0 4px 16px rgba(16,24,40,0.06);
+    --shadow-hover: 0 2px 4px rgba(16,24,40,0.06), 0 10px 28px rgba(16,24,40,0.10);
+    --text: #1c2333;
+    --muted: #6b7280;
+    --accent: #0ea5e9;
+    --accent-2: #6366f1;
+    --accent-soft: rgba(14,165,233,0.10);
+    --green: #16a34a;
+    --green-soft: rgba(22,163,74,0.10);
+    --red: #dc2626;
+    --red-soft: rgba(220,38,38,0.08);
+    --amber: #d97706;
+    --amber-soft: rgba(217,119,6,0.10);
     --radius: 16px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
     background:
-      radial-gradient(1000px 500px at 85% -10%, rgba(34,211,238,0.12), transparent 60%),
-      radial-gradient(800px 400px at 5% 0%, rgba(129,140,248,0.12), transparent 60%),
+      radial-gradient(900px 480px at 85% -10%, rgba(99,102,241,0.10), transparent 60%),
+      radial-gradient(800px 420px at 5% 0%, rgba(14,165,233,0.10), transparent 60%),
       var(--bg);
     color: var(--text);
     min-height: 100vh;
@@ -36,54 +43,64 @@
     color: var(--muted); text-decoration: none; font-size: 14px;
     padding: 8px 14px; border: 1px solid var(--card-border);
     border-radius: 99px; background: var(--card);
+    box-shadow: var(--shadow);
     transition: border-color 0.2s, color 0.2s;
   }
-  .top a:hover { color: var(--accent); border-color: rgba(34,211,238,0.5); }
-  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; }
+  .top a:hover { color: var(--accent); border-color: rgba(14,165,233,0.4); }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
   .updated-badge {
     display: inline-block; font-size: 12px; margin-top: 10px;
     padding: 4px 12px; border-radius: 99px;
-    background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3);
-    color: var(--accent); font-weight: 600;
+    background: var(--accent-soft); border: 1px solid rgba(14,165,233,0.25);
+    color: #0369a1; font-weight: 600;
   }
   .updated-badge.loading { color: var(--muted); border-color: var(--card-border); background: var(--card); }
-  .updated-badge.old { color: var(--amber); border-color: rgba(251,191,36,0.3); background: rgba(251,191,36,0.08); }
+  .updated-badge.old { color: var(--amber); border-color: rgba(217,119,6,0.3); background: var(--amber-soft); }
 
-  .panel { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
-  .panel h2 { font-size: 16px; font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .panel {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 22px; margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .panel h2 { font-size: 16px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; color: var(--text); }
 
   .input-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
-  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 5px; font-weight: 500; }
   .field input {
     width: 100%; padding: 10px 12px; border-radius: 10px;
-    border: 1px solid var(--card-border); background: rgba(0,0,0,0.3);
+    border: 1px solid var(--card-border); background: #fafbfe;
     color: var(--text); font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .field input:focus { outline: none; border-color: rgba(34,211,238,0.5); }
+  .field input:focus { outline: none; border-color: rgba(14,165,233,0.6); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
 
   .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--card-border); }
   table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--card); }
   th {
     text-align: left; padding: 12px 14px; font-size: 11px; text-transform: uppercase;
-    letter-spacing: 0.05em; color: var(--muted);
-    border-bottom: 1px solid var(--card-border); background: rgba(0,0,0,0.25);
+    letter-spacing: 0.05em; color: var(--muted); font-weight: 600;
+    border-bottom: 1px solid var(--card-border); background: var(--bg-soft);
     white-space: nowrap;
   }
-  td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+  td { padding: 12px 14px; border-bottom: 1px solid #f0f2f7; white-space: nowrap; }
   tr:last-child td { border-bottom: none; }
-  tr:hover td { background: rgba(255,255,255,0.02); }
+  tr:hover td { background: #fafbfe; }
   .num { font-variant-numeric: tabular-nums; text-align: right; }
   .company { font-weight: 600; }
-  .ticker { color: var(--muted); font-size: 11px; font-weight: 400; }
-  .shares-big { font-weight: 700; color: var(--accent); font-size: 15px; }
+  .ticker { color: var(--muted); font-size: 11px; font-weight: 500; }
+  .shares-big { font-weight: 700; color: #0369a1; font-size: 15px; }
   .warn { color: var(--amber); font-size: 12.5px; font-weight: 600; }
   .muted-cell { color: var(--muted); }
+  tr.total td { background: var(--bg-soft); font-weight: 700; }
 
   .summary-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 20px; }
-  .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 14px 16px; }
+  .stat {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow);
+  }
   .stat .label { font-size: 12px; color: var(--muted); }
-  .stat .value { font-size: 20px; font-weight: 700; margin-top: 2px; }
+  .stat .value { font-size: 20px; font-weight: 700; margin-top: 2px; color: var(--text); }
   .stat .value.up { color: var(--green); }
   .stat .value.down { color: var(--red); }
 
@@ -91,12 +108,12 @@
     padding: 10px 18px; border-radius: 10px; border: none; cursor: pointer;
     font-size: 14px; font-weight: 600;
   }
-  .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #081120; }
-  .btn-ghost { background: transparent; border: 1px solid var(--card-border); color: var(--muted); }
-  .btn-primary:hover { filter: brightness(1.1); }
-  .btn-ghost:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+  .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; box-shadow: 0 2px 8px rgba(14,165,233,0.3); }
+  .btn-ghost { background: var(--card); border: 1px solid var(--card-border); color: var(--muted); box-shadow: var(--shadow); }
+  .btn-primary:hover { filter: brightness(1.05); }
+  .btn-ghost:hover { color: var(--text); border-color: #cbd5e1; }
   .btn-sm { padding: 6px 12px; font-size: 12px; }
-  .btn-danger { background: rgba(248,113,113,0.12); border: 1px solid rgba(248,113,113,0.3); color: var(--red); }
+  .btn-danger { background: var(--red-soft); border: 1px solid rgba(220,38,38,0.25); color: var(--red); }
 
   .actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
 
@@ -107,16 +124,17 @@
   }
   .setting-row input {
     width: 100%; padding: 9px 11px; border-radius: 9px;
-    border: 1px solid var(--card-border); background: rgba(0,0,0,0.3);
+    border: 1px solid var(--card-border); background: #fafbfe;
     color: var(--text); font-size: 13.5px;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .setting-row input:focus { outline: none; border-color: rgba(34,211,238,0.5); }
+  .setting-row input:focus { outline: none; border-color: rgba(14,165,233,0.6); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
   .setting-head {
     display: grid; grid-template-columns: 1.6fr 1fr 0.9fr 1.2fr 0.7fr; gap: 8px;
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
-    color: var(--muted); margin-bottom: 8px;
+    color: var(--muted); font-weight: 600; margin-bottom: 8px;
   }
-  .alloc-total { font-size: 13px; margin-top: 10px; color: var(--muted); }
+  .alloc-total { font-size: 13px; margin-top: 10px; color: var(--muted); font-weight: 500; }
   .alloc-total.ok { color: var(--green); }
   .alloc-total.bad { color: var(--red); }
 
@@ -125,28 +143,29 @@
   .donut-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 10px 0; }
   .donut {
     width: 180px; height: 180px; border-radius: 50%;
-    position: relative;
+    position: relative; box-shadow: inset 0 0 0 1px rgba(16,24,40,0.06);
   }
   .donut-center {
     position: absolute; inset: 22px; border-radius: 50%;
-    background: var(--bg); display: flex; flex-direction: column;
+    background: var(--card); display: flex; flex-direction: column;
     align-items: center; justify-content: center;
+    box-shadow: var(--shadow);
   }
-  .donut-center .v { font-size: 18px; font-weight: 700; }
+  .donut-center .v { font-size: 18px; font-weight: 700; color: var(--text); }
   .donut-center .l { font-size: 11px; color: var(--muted); }
   .legend { width: 100%; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
   .legend-row { display: flex; align-items: center; gap: 8px; }
   .legend-row .swatch { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
-  .legend-row .name { flex: 1; }
+  .legend-row .name { flex: 1; color: var(--text); }
   .legend-row .pct { color: var(--muted); font-variant-numeric: tabular-nums; }
 
   .perf-cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
   .perf-card {
     background: var(--card); border: 1px solid var(--card-border);
-    border-radius: 12px; padding: 14px 16px;
+    border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow);
   }
   .perf-card .row1 { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-  .perf-card .row1 .nm { font-weight: 600; font-size: 14px; }
+  .perf-card .row1 .nm { font-weight: 600; font-size: 14px; color: var(--text); }
   .perf-card .row1 .chg { font-weight: 700; font-size: 15px; }
   .chg.up { color: var(--green); }
   .chg.down { color: var(--red); }
@@ -157,7 +176,7 @@
   .note {
     background: var(--card); border: 1px solid var(--card-border);
     border-radius: var(--radius); padding: 16px 18px;
-    font-size: 13px; color: var(--muted); margin-top: 8px;
+    font-size: 13px; color: var(--muted); margin-top: 8px; box-shadow: var(--shadow);
   }
   .note strong { color: var(--text); }
   footer { text-align: center; margin-top: 40px; color: var(--muted); font-size: 12.5px; }
@@ -236,6 +255,7 @@
       <button class="btn btn-ghost btn-sm" onclick="addCompanyRow()">+ Add Company</button>
       <button class="btn btn-primary" onclick="saveSettings()">Save</button>
       <button class="btn btn-ghost" onclick="toggleSettings()">Cancel</button>
+      <button class="btn btn-ghost btn-sm" onclick="resetSettings()">↺ Reset</button>
     </div>
   </div>
 
@@ -268,6 +288,7 @@ const DEFAULT_COMPANIES = [
   { name: 'BSRM',          ticker: 'BSRMSTEEL',  pct: 15, role: 'Sector leader' }
 ];
 const DEFAULT_SETTINGS = { monthlyAmount: 20000, commissionPct: 0.4 };
+const FALLBACK_PRICES = { SQURPHARMA: 218.8, BRACBANK: 62.8, GP: 249.8, EBL: 23.9, BSRMSTEEL: 93.5 };
 
 let PRICES = {};      // ticker -> last price
 let HISTORY = [];     // [{date, prices:{...}}]
@@ -276,6 +297,19 @@ let LAST_UPDATED = null;
 const fmt = (n, d = 2) => Number(n || 0).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
 const bdt = (n) => '৳' + Number(n || 0).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
+function sanitizeCompanies(list) {
+  if (!Array.isArray(list)) return DEFAULT_COMPANIES.map(c => ({ ...c }));
+  const out = list
+    .filter(c => c && typeof c === 'object')
+    .map(c => ({
+      name: String(c.name || '').trim() || 'Company',
+      ticker: String(c.ticker || '').trim().toUpperCase() || 'NEW',
+      pct: Number(c.pct) || 0,
+      role: String(c.role || '').trim()
+    }));
+  return out.length ? out : DEFAULT_COMPANIES.map(c => ({ ...c }));
+}
+
 function loadSettings() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -283,7 +317,7 @@ function loadSettings() {
       const d = JSON.parse(raw);
       return {
         settings: { ...DEFAULT_SETTINGS, ...(d.settings || {}) },
-        companies: Array.isArray(d.companies) && d.companies.length ? d.companies : DEFAULT_COMPANIES
+        companies: sanitizeCompanies(d.companies)
       };
     }
   } catch (e) {}
@@ -293,7 +327,9 @@ function loadSettings() {
 let state = loadSettings();
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch (e) {}
 }
 
 async function loadPrices() {
@@ -301,14 +337,13 @@ async function loadPrices() {
     const res = await fetch('data/prices.json', { cache: 'no-store' });
     if (res.ok) {
       const d = await res.json();
-      PRICES = d.prices || {};
-      HISTORY = Array.isArray(d.history) ? d.history : [];
-      LAST_UPDATED = d.lastUpdated || null;
+      PRICES = (d && d.prices) || {};
+      HISTORY = Array.isArray(d && d.history) ? d.history : [];
+      LAST_UPDATED = (d && d.lastUpdated) || null;
       return true;
     }
   } catch (e) {}
-  // fallback to embedded defaults so the page still renders
-  PRICES = { SQURPHARMA: 218.8, BRACBANK: 62.8, GP: 249.8, EBL: 23.9, BSRMSTEEL: 93.5 };
+  PRICES = { ...FALLBACK_PRICES };
   return false;
 }
 
@@ -335,7 +370,7 @@ function renderGuide() {
     const pct = allocPct(c);
     const budget = amount * pct / 100;
     const price = priceOf(c.ticker);
-    const costPerShare = price * (1 + commRate);
+    const costPerShare = price > 0 ? price * (1 + commRate) : 0;
     const shares = price > 0 ? Math.floor(budget / costPerShare) : 0;
     const cost = shares * costPerShare;
     const leftover = budget - cost;
@@ -360,17 +395,17 @@ function renderGuide() {
   });
 
   const tr = document.createElement('tr');
+  tr.className = 'total';
   tr.innerHTML = `
     <td class="company">Total</td>
     <td class="num">100%</td>
     <td class="num">${bdt(totalBudget)}</td>
     <td class="num">—</td>
     <td class="num">${bdt(totalComm)}</td>
-    <td class="num">${bdt(totalShares)}</td>
+    <td class="num">${totalShares.toLocaleString('en-US')}</td>
     <td class="num">${bdt(totalCost)}</td>
     <td class="num">${bdt(totalLeftover)}</td>
   `;
-  tr.style.background = 'rgba(0,0,0,0.2)';
   body.appendChild(tr);
 
   const summary = document.getElementById('summaryRow');
@@ -383,7 +418,6 @@ function renderGuide() {
 }
 
 function renderPerformance() {
-  // Donut chart (CSS conic-gradient)
   const wrap = document.getElementById('donutWrap');
   let acc = 0;
   const segs = state.companies.map(c => {
@@ -392,7 +426,7 @@ function renderPerformance() {
     acc = end;
     return { c, pct, start, end };
   });
-  const colors = ['#22d3ee', '#818cf8', '#34d399', '#fbbf24', '#f472b6', '#a78bfa', '#4ade80', '#fb923c'];
+  const colors = ['#0ea5e9', '#6366f1', '#16a34a', '#f59e0b', '#ec4899', '#8b5cf6', '#10b981', '#f97316'];
   const gradient = segs.map((s, i) => `${colors[i % colors.length]} ${s.start}% ${s.end}%`).join(', ');
   const totalAlloc = segs.reduce((a, s) => a + s.pct, 0);
 
@@ -414,7 +448,6 @@ function renderPerformance() {
     <div class="legend">${legend}</div>
   `;
 
-  // Per-company change vs previous snapshot + sparkline
   const cards = document.getElementById('perfCards');
   cards.innerHTML = '';
   const latestDay = HISTORY.length ? HISTORY[HISTORY.length - 1] : null;
@@ -433,7 +466,6 @@ function renderPerformance() {
       : (changePct > 0 ? '+' : '') + changePct.toFixed(2) + '%'
         + (changeVal != null ? ` (${changeVal > 0 ? '+' : ''}${fmt(changeVal)})` : '');
 
-    // build sparkline
     const series = HISTORY.map(h => h.prices && h.prices[c.ticker] != null ? h.prices[c.ticker] : null).filter(v => v != null);
     const sparkSvg = series.length >= 2 ? buildSparkline(series) : '<span class="muted-cell">No history yet</span>';
 
@@ -465,7 +497,7 @@ function buildSparkline(series) {
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(' ');
   const rising = series[series.length - 1] >= series[0];
-  const color = rising ? '#34d399' : '#f87171';
+  const color = rising ? '#16a34a' : '#dc2626';
   return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
     <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
   </svg>`;
@@ -499,6 +531,7 @@ function toggleSettings() {
   if (panel.classList.contains('hidden')) {
     renderSettingRows();
     panel.classList.remove('hidden');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } else {
     panel.classList.add('hidden');
   }
@@ -513,7 +546,7 @@ function renderSettingRows() {
     row.innerHTML = `
       <input data-i="${i}" data-k="name" value="${c.name}" placeholder="Company">
       <input data-i="${i}" data-k="ticker" value="${c.ticker}" placeholder="Ticker" oninput="this.value=this.value.toUpperCase()">
-      <input data-i="${i}" data-k="pct" type="number" step="0.5" value="${c.pct}" placeholder="%">
+      <input data-i="${i}" data-k="pct" type="number" step="0.5" min="0" max="100" value="${c.pct}" placeholder="%">
       <input data-i="${i}" data-k="role" value="${c.role}" placeholder="Role">
       <button class="btn btn-danger btn-sm" onclick="removeCompanyRow(${i})">✕</button>
     `;
@@ -537,9 +570,10 @@ function updateAllocTotal() {
   let total = 0;
   inputs.forEach(inp => total += parseFloat(inp.value) || 0);
   const el = document.getElementById('allocTotal');
-  el.classList.toggle('ok', Math.abs(total - 100) < 0.01);
-  el.classList.toggle('bad', Math.abs(total - 100) >= 0.01);
-  el.textContent = `Total allocation: ${total.toFixed(1)}% ${Math.abs(total - 100) < 0.01 ? '✓' : '(must equal 100%)'}`;
+  const ok = Math.abs(total - 100) < 0.01;
+  el.classList.toggle('ok', ok);
+  el.classList.toggle('bad', !ok);
+  el.textContent = `Total allocation: ${total.toFixed(1)}% ${ok ? '✓' : '(must equal 100%)'}`;
 }
 
 function saveSettings() {
@@ -561,7 +595,17 @@ function saveSettings() {
     return;
   }
   state.settings = { monthlyAmount, commissionPct };
-  state.companies = companies;
+  state.companies = sanitizeCompanies(companies);
+  saveState();
+  syncInputs();
+  toggleSettings();
+  renderGuide();
+  renderPerformance();
+}
+
+function resetSettings() {
+  if (!confirm('Reset companies and settings to defaults?')) return;
+  state = { settings: { ...DEFAULT_SETTINGS }, companies: DEFAULT_COMPANIES.map(c => ({ ...c })) };
   saveState();
   syncInputs();
   toggleSettings();
