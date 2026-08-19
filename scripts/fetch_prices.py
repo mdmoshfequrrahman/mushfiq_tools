@@ -29,10 +29,39 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 DATA_FILE = os.path.join(DATA_DIR, "prices.json")
 COMPANIES_FILE = os.path.join(DATA_DIR, "companies.json")
+PORTFOLIO_FILE = os.path.join(DATA_DIR, "portfolio.json")
 
-# Default tickers. The frontend settings can define more, but this is the
-# baseline set the scraper keeps up to date.
-TICKERS = ["SQURPHARMA", "BRACBANK", "GP", "EBL", "BSRMSTEEL"]
+# Baseline tickers always kept up to date. Any tickers added to the
+# frontend portfolio (data/portfolio.json) are also fetched.
+DEFAULT_TICKERS = [
+    "SQURPHARMA", "BRACBANK", "GP", "EBL", "BSRMSTEEL",
+    # common picks so newly added companies already have prices
+    "CITYBANK", "PUBALIBANK", "MARICO", "RENATA", "ACI",
+    "BSCPLC", "BERGERPBL", "RECKITTBEN", "OLYMPIC",
+    "WALTONHIL", "DELTALIFE", "PRIMELIFE", "RUPALILIFE",
+    "JAMUNAOIL", "PADMAOIL", "MEGHNAPET", "KDSALTD", "MONNOCERA",
+    "AMANFEED", "BSRMLTD", "SINGERBD", "ACIFORMULA", "POWERGRID",
+    "SUMITPOWER", "IPDC", "ISLAMIBANK", "DUTCHBANGL",
+    "ALARABANK", "NCCBANK", "DBH", "HEIDELBCEM",
+    "FUWANGCER", "RAKCERAMIC", "RUPALIBANK", "SQUARETEXT",
+]
+
+
+def get_tickers():
+    """Return the union of default tickers and any in portfolio.json."""
+    tickers = set(DEFAULT_TICKERS)
+    if os.path.exists(PORTFOLIO_FILE):
+        try:
+            with open(PORTFOLIO_FILE, "r", encoding="utf-8") as f:
+                pf = json.load(f)
+            if isinstance(pf, dict) and isinstance(pf.get("tickers"), list):
+                for t in pf["tickers"]:
+                    t = str(t).strip().upper()
+                    if t:
+                        tickers.add(t)
+        except Exception as exc:
+            print(f"portfolio read: {exc}", file=sys.stderr)
+    return sorted(tickers)
 
 
 def fetch_html(url):
@@ -106,8 +135,9 @@ def load_existing():
 
 
 def main():
+    tickers = get_tickers()
     prices = {}
-    for ticker in TICKERS:
+    for ticker in tickers:
         try:
             html = fetch_html(BASE_URL.format(ticker))
             price = parse_price(html)
@@ -137,7 +167,7 @@ def main():
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     # keep existing prices for tickers that failed this run
-    for t in TICKERS:
+    for t in tickers:
         if t not in prices and t in data.get("prices", {}):
             prices[t] = data["prices"][t]
 

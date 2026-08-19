@@ -391,7 +391,7 @@ async function loadCompanies() {
 }
 
 function priceOf(ticker) {
-  return PRICES[ticker] != null ? PRICES[ticker] : 0;
+  return PRICES[ticker] != null ? PRICES[ticker] : null;
 }
 
 function allocPct(company) {
@@ -421,9 +421,14 @@ function renderGuide() {
     totalBudget += budget; totalShares += shares; totalCost += cost; totalLeftover += leftover; totalComm += commission;
 
     const tr = document.createElement('tr');
-    const shareCell = shares > 0
-      ? `<span class="shares-big">${shares}</span>`
-      : `<span class="warn">Save 2 mo & buy</span>`;
+    let shareCell;
+    if (price == null) {
+      shareCell = '<span class="warn">No price yet</span>';
+    } else if (shares > 0) {
+      shareCell = `<span class="shares-big">${shares}</span>`;
+    } else {
+      shareCell = '<span class="warn">Save 2 mo & buy</span>';
+    }
     tr.innerHTML = `
       <td class="company">${c.name} <span class="ticker">${c.ticker}</span></td>
       <td class="num">${pct.toFixed(1)}%</td>
@@ -499,7 +504,7 @@ function renderPerformance() {
   state.companies.forEach(c => {
     const price = priceOf(c.ticker);
     let changePct = null, changeVal = null;
-    if (prevDay && prevDay.prices && prevDay.prices[c.ticker] != null) {
+    if (price != null && prevDay && prevDay.prices && prevDay.prices[c.ticker] != null) {
       const prev = prevDay.prices[c.ticker];
       changePct = prev > 0 ? ((price - prev) / prev) * 100 : 0;
       changeVal = price - prev;
@@ -520,7 +525,7 @@ function renderPerformance() {
         <span class="chg ${chgClass}">${chgText}</span>
       </div>
       <div class="row2">
-        <span>Last: ${fmt(price)}</span>
+        <span>Last: ${price != null ? fmt(price) : '—'}</span>
         <span>${latestDay ? latestDay.date : ''}</span>
       </div>
       ${sparkSvg}
