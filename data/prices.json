@@ -1,7 +1,8 @@
 {
-  "lastUpdated": "2026-08-23T19:28:51+00:00",
+  "lastUpdated": "2026-08-23T23:29:16+00:00",
   "prices": {
     "ACI": 191.1,
+    "ACIFORMULA": 164.9,
     "ALARABANK": 17.6,
     "AMANFEED": 37.1,
     "BERGERPBL": 1499.3,
@@ -39,8 +40,7 @@
     "SQUARETEXT": 50.4,
     "SQURPHARMA": 218.2,
     "SUMITPOWER": 15.7,
-    "WALTONHIL": 388.4,
-    "ACIFORMULA": 164.9
+    "WALTONHIL": 388.4
   },
   "history": [
     {
@@ -147,6 +147,7 @@
       "date": "2026-08-23",
       "prices": {
         "ACI": 191.1,
+        "ACIFORMULA": 164.9,
         "ALARABANK": 17.6,
         "AMANFEED": 37.1,
         "BERGERPBL": 1499.3,
@@ -184,8 +185,7 @@
         "SQUARETEXT": 50.4,
         "SQURPHARMA": 218.2,
         "SUMITPOWER": 15.7,
-        "WALTONHIL": 388.4,
-        "ACIFORMULA": 164.9
+        "WALTONHIL": 388.4
       }
     }
   ],
@@ -353,6 +353,7 @@
   },
   "prevClose": {
     "ACI": 196.0,
+    "ACIFORMULA": 168.5,
     "ALARABANK": 18.5,
     "AMANFEED": 38.3,
     "BERGERPBL": 1501.5,
