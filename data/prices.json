@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-24T08:57:19+00:00",
+  "lastUpdated": "2026-08-24T09:56:01+00:00",
   "prices": {
     "ACI": 189.1,
     "ACIFORMULA": 159.9,
@@ -10,7 +10,6 @@
     "BSCPLC": 152.5,
     "BSRMLTD": 100.1,
     "BSRMSTEEL": 91.9,
-    "CITYBANK": 30.6,
     "DBH": 41.7,
     "DELTALIFE": 75.6,
     "DUTCHBANGL": 45.6,
@@ -33,6 +32,7 @@
     "PUBALIBANK": 38.9,
     "RAKCERAMIC": 31.4,
     "RECKITTBEN": 3296.8,
+    "RENATA": 464.5,
     "RUPALIBANK": 17.4,
     "RUPALILIFE": 76.9,
     "SINGERBD": 73.8,
@@ -40,7 +40,7 @@
     "SQURPHARMA": 217.9,
     "SUMITPOWER": 15.5,
     "WALTONHIL": 384.0,
-    "RENATA": 464.2
+    "CITYBANK": 30.6
   },
   "history": [
     {
@@ -200,7 +200,6 @@
         "BSCPLC": 152.5,
         "BSRMLTD": 100.1,
         "BSRMSTEEL": 91.9,
-        "CITYBANK": 30.6,
         "DBH": 41.7,
         "DELTALIFE": 75.6,
         "DUTCHBANGL": 45.6,
@@ -223,6 +222,7 @@
         "PUBALIBANK": 38.9,
         "RAKCERAMIC": 31.4,
         "RECKITTBEN": 3296.8,
+        "RENATA": 464.5,
         "RUPALIBANK": 17.4,
         "RUPALILIFE": 76.9,
         "SINGERBD": 73.8,
@@ -230,7 +230,7 @@
         "SQURPHARMA": 217.9,
         "SUMITPOWER": 15.5,
         "WALTONHIL": 384.0,
-        "RENATA": 464.2
+        "CITYBANK": 30.6
       }
     }
   ],
@@ -406,7 +406,6 @@
     "BSCPLC": 153.7,
     "BSRMLTD": 100.6,
     "BSRMSTEEL": 92.9,
-    "CITYBANK": 30.8,
     "DBH": 42.0,
     "DELTALIFE": 76.2,
     "DUTCHBANGL": 46.5,
@@ -429,6 +428,7 @@
     "PUBALIBANK": 39.4,
     "RAKCERAMIC": 31.2,
     "RECKITTBEN": 3300.6,
+    "RENATA": 465.2,
     "RUPALIBANK": 17.5,
     "RUPALILIFE": 79.9,
     "SINGERBD": 74.5,
