@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-24T11:36:29+00:00",
+  "lastUpdated": "2026-08-24T13:02:26+00:00",
   "prices": {
     "ACI": 189.1,
     "ACIFORMULA": 159.9,
@@ -34,13 +34,13 @@
     "RAKCERAMIC": 31.4,
     "RECKITTBEN": 3296.8,
     "RENATA": 464.5,
+    "RUPALIBANK": 17.4,
     "RUPALILIFE": 76.9,
     "SINGERBD": 73.8,
     "SQUARETEXT": 49.0,
     "SQURPHARMA": 217.9,
     "SUMITPOWER": 15.5,
-    "WALTONHIL": 384.0,
-    "RUPALIBANK": 17.4
+    "WALTONHIL": 384.0
   },
   "history": [
     {
@@ -224,13 +224,13 @@
         "RAKCERAMIC": 31.4,
         "RECKITTBEN": 3296.8,
         "RENATA": 464.5,
+        "RUPALIBANK": 17.4,
         "RUPALILIFE": 76.9,
         "SINGERBD": 73.8,
         "SQUARETEXT": 49.0,
         "SQURPHARMA": 217.9,
         "SUMITPOWER": 15.5,
-        "WALTONHIL": 384.0,
-        "RUPALIBANK": 17.4
+        "WALTONHIL": 384.0
       }
     }
   ],
@@ -430,6 +430,7 @@
     "RAKCERAMIC": 31.2,
     "RECKITTBEN": 3300.6,
     "RENATA": 465.2,
+    "RUPALIBANK": 17.5,
     "RUPALILIFE": 79.9,
     "SINGERBD": 74.5,
     "SQUARETEXT": 50.4,
