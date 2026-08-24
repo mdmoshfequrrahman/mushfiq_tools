@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-24T09:56:01+00:00",
+  "lastUpdated": "2026-08-24T10:44:10+00:00",
   "prices": {
     "ACI": 189.1,
     "ACIFORMULA": 159.9,
@@ -10,6 +10,7 @@
     "BSCPLC": 152.5,
     "BSRMLTD": 100.1,
     "BSRMSTEEL": 91.9,
+    "CITYBANK": 30.6,
     "DBH": 41.7,
     "DELTALIFE": 75.6,
     "DUTCHBANGL": 45.6,
@@ -39,8 +40,7 @@
     "SQUARETEXT": 49.0,
     "SQURPHARMA": 217.9,
     "SUMITPOWER": 15.5,
-    "WALTONHIL": 384.0,
-    "CITYBANK": 30.6
+    "WALTONHIL": 384.0
   },
   "history": [
     {
@@ -200,6 +200,7 @@
         "BSCPLC": 152.5,
         "BSRMLTD": 100.1,
         "BSRMSTEEL": 91.9,
+        "CITYBANK": 30.6,
         "DBH": 41.7,
         "DELTALIFE": 75.6,
         "DUTCHBANGL": 45.6,
@@ -229,8 +230,7 @@
         "SQUARETEXT": 49.0,
         "SQURPHARMA": 217.9,
         "SUMITPOWER": 15.5,
-        "WALTONHIL": 384.0,
-        "CITYBANK": 30.6
+        "WALTONHIL": 384.0
       }
     }
   ],
@@ -406,6 +406,7 @@
     "BSCPLC": 153.7,
     "BSRMLTD": 100.6,
     "BSRMSTEEL": 92.9,
+    "CITYBANK": 30.8,
     "DBH": 42.0,
     "DELTALIFE": 76.2,
     "DUTCHBANGL": 46.5,
