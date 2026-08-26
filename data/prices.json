@@ -1,9 +1,17 @@
 {
-  "lastUpdated": "2026-08-26T07:18:44+00:00",
+  "lastUpdated": "2026-08-26T07:55:46+00:00",
   "prices": {
     "ACI": 190.5,
     "ACIFORMULA": 160.8,
+    "ALARABANK": 17.6,
     "AMANFEED": 36.7,
+    "BERGERPBL": 1493.7,
+    "BRACBANK": 61.6,
+    "BSCPLC": 152.9,
+    "BSRMLTD": 99.8,
+    "BSRMSTEEL": 90.9,
+    "CITYBANK": 30.4,
+    "DBH": 41.6,
     "DELTALIFE": 74.9,
     "DUTCHBANGL": 45.6,
     "EBL": 23.8,
@@ -32,15 +40,7 @@
     "SQUARETEXT": 49.4,
     "SQURPHARMA": 217.9,
     "SUMITPOWER": 15.4,
-    "WALTONHIL": 383.1,
-    "ALARABANK": 17.6,
-    "BERGERPBL": 1493.7,
-    "BRACBANK": 61.6,
-    "BSCPLC": 152.9,
-    "BSRMLTD": 99.8,
-    "BSRMSTEEL": 90.9,
-    "CITYBANK": 30.4,
-    "DBH": 41.6
+    "WALTONHIL": 383.1
   },
   "history": [
     {
@@ -283,7 +283,15 @@
       "prices": {
         "ACI": 190.5,
         "ACIFORMULA": 160.8,
+        "ALARABANK": 17.6,
         "AMANFEED": 36.7,
+        "BERGERPBL": 1493.7,
+        "BRACBANK": 61.6,
+        "BSCPLC": 152.9,
+        "BSRMLTD": 99.8,
+        "BSRMSTEEL": 90.9,
+        "CITYBANK": 30.4,
+        "DBH": 41.6,
         "DELTALIFE": 74.9,
         "DUTCHBANGL": 45.6,
         "EBL": 23.8,
@@ -312,15 +320,7 @@
         "SQUARETEXT": 49.4,
         "SQURPHARMA": 217.9,
         "SUMITPOWER": 15.4,
-        "WALTONHIL": 383.1,
-        "ALARABANK": 17.6,
-        "BERGERPBL": 1493.7,
-        "BRACBANK": 61.6,
-        "BSCPLC": 152.9,
-        "BSRMLTD": 99.8,
-        "BSRMSTEEL": 90.9,
-        "CITYBANK": 30.4,
-        "DBH": 41.6
+        "WALTONHIL": 383.1
       }
     }
   ],
@@ -333,9 +333,41 @@
       "low": 115.0,
       "high": 189.2
     },
+    "ALARABANK": {
+      "low": 12.0,
+      "high": 19.5
+    },
     "AMANFEED": {
       "low": 21.2,
       "high": 41.4
+    },
+    "BERGERPBL": {
+      "low": 1335.9,
+      "high": 1524.0
+    },
+    "BRACBANK": {
+      "low": 60.0,
+      "high": 89.6
+    },
+    "BSCPLC": {
+      "low": 117.0,
+      "high": 169.1
+    },
+    "BSRMLTD": {
+      "low": 71.5,
+      "high": 115.0
+    },
+    "BSRMSTEEL": {
+      "low": 55.0,
+      "high": 102.0
+    },
+    "CITYBANK": {
+      "low": 22.6,
+      "high": 33.9
+    },
+    "DBH": {
+      "low": 31.5,
+      "high": 45.2
     },
     "DELTALIFE": {
       "low": 60.8,
@@ -457,7 +489,15 @@
   "prevClose": {
     "ACI": 189.1,
     "ACIFORMULA": 159.9,
+    "ALARABANK": 17.4,
     "AMANFEED": 37.1,
+    "BERGERPBL": 1490.9,
+    "BRACBANK": 62.6,
+    "BSCPLC": 152.5,
+    "BSRMLTD": 100.1,
+    "BSRMSTEEL": 91.9,
+    "CITYBANK": 30.6,
+    "DBH": 41.7,
     "DELTALIFE": 75.3,
     "DUTCHBANGL": 45.6,
     "EBL": 23.8,
