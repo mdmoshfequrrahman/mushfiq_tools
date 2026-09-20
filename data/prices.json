@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T14:04:52+00:00",
+  "lastUpdated": "2026-09-20T18:11:32+00:00",
   "prices": {
     "ACI": 187.8,
     "ACIFORMULA": 160.6,
@@ -19,7 +19,6 @@
     "GP": 242.3,
     "HEIDELBCEM": 211.6,
     "IPDC": 33.7,
-    "ISLAMIBANK": 26.8,
     "JAMUNAOIL": 180.2,
     "KDSALTD": 45.8,
     "MARICO": 2669.9,
@@ -40,7 +39,8 @@
     "SQUARETEXT": 49.4,
     "SQURPHARMA": 215.9,
     "SUMITPOWER": 15.6,
-    "WALTONHIL": 394.6
+    "WALTONHIL": 394.6,
+    "ISLAMIBANK": 26.8
   },
   "history": [
     {
@@ -1244,7 +1244,6 @@
         "GP": 242.3,
         "HEIDELBCEM": 211.6,
         "IPDC": 33.7,
-        "ISLAMIBANK": 26.8,
         "JAMUNAOIL": 180.2,
         "KDSALTD": 45.8,
         "MARICO": 2669.9,
@@ -1265,7 +1264,8 @@
         "SQUARETEXT": 49.4,
         "SQURPHARMA": 215.9,
         "SUMITPOWER": 15.6,
-        "WALTONHIL": 394.6
+        "WALTONHIL": 394.6,
+        "ISLAMIBANK": 26.8
       }
     }
   ],
@@ -1450,7 +1450,6 @@
     "GP": 240.1,
     "HEIDELBCEM": 209.9,
     "IPDC": 32.6,
-    "ISLAMIBANK": 26.9,
     "JAMUNAOIL": 177.8,
     "KDSALTD": 45.1,
     "MARICO": 2651.1,
